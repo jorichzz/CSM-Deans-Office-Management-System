@@ -116,10 +116,10 @@
     <Compile Include="Document\ucDocument.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Document\ucDocumentLogs.Designer.vb">
-      <DependentUpon>ucDocumentLogs.vb</DependentUpon>
+    <Compile Include="Document\ucDocumentReceived.Designer.vb">
+      <DependentUpon>ucDocumentReceived.vb</DependentUpon>
     </Compile>
-    <Compile Include="Document\ucDocumentLogs.vb">
+    <Compile Include="Document\ucDocumentReceived.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Faculty\ucFaculty.Designer.vb">
@@ -135,6 +135,12 @@
       <DependentUpon>frmDashboard.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Maintenance\Document\ucDocumentMaintenance.Designer.vb">
       <DependentUpon>ucDocumentMaintenance.vb</DependentUpon>
     </Compile>
@@ -145,6 +151,30 @@
       <DependentUpon>ucManageDocumentType.vb</DependentUpon>
     </Compile>
     <Compile Include="Maintenance\Document\ucManageDocumentType.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Student\ucManageCourse.Designer.vb">
+      <DependentUpon>ucManageCourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Student\ucManageCourse.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Student\ucManageScholarship.Designer.vb">
+      <DependentUpon>ucManageScholarship.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Student\ucManageScholarship.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Student\ucManageYearLevel.Designer.vb">
+      <DependentUpon>ucManageYearLevel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Student\ucManageYearLevel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Student\ucStudentMaintenance.Designer.vb">
+      <DependentUpon>ucStudentMaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Student\ucStudentMaintenance.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Maintenance\ucMaintenance.Designer.vb">
@@ -182,10 +212,22 @@
     <Compile Include="Maintenance\User\ucUserMaintenance.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Student\ucSearchStudent.Designer.vb">
+      <DependentUpon>ucSearchStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ucSearchStudent.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Student\ucStudent.Designer.vb">
       <DependentUpon>ucStudent.vb</DependentUpon>
     </Compile>
     <Compile Include="Student\ucStudent.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student\ucStudentProfiling.Designer.vb">
+      <DependentUpon>ucStudentProfiling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ucStudentProfiling.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
@@ -196,8 +238,8 @@
     <EmbeddedResource Include="Document\ucDocument.resx">
       <DependentUpon>ucDocument.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Document\ucDocumentLogs.resx">
-      <DependentUpon>ucDocumentLogs.vb</DependentUpon>
+    <EmbeddedResource Include="Document\ucDocumentReceived.resx">
+      <DependentUpon>ucDocumentReceived.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Faculty\ucFaculty.resx">
       <DependentUpon>ucFaculty.vb</DependentUpon>
@@ -205,11 +247,26 @@
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Maintenance\Document\ucDocumentMaintenance.resx">
       <DependentUpon>ucDocumentMaintenance.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance\Document\ucManageDocumentType.resx">
       <DependentUpon>ucManageDocumentType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Student\ucManageCourse.resx">
+      <DependentUpon>ucManageCourse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Student\ucManageScholarship.resx">
+      <DependentUpon>ucManageScholarship.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Student\ucManageYearLevel.resx">
+      <DependentUpon>ucManageYearLevel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Student\ucStudentMaintenance.resx">
+      <DependentUpon>ucStudentMaintenance.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance\ucMaintenance.resx">
       <DependentUpon>ucMaintenance.vb</DependentUpon>
@@ -226,8 +283,14 @@
     <EmbeddedResource Include="Maintenance\User\ucUserMaintenance.resx">
       <DependentUpon>ucUserMaintenance.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Student\ucSearchStudent.resx">
+      <DependentUpon>ucSearchStudent.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student\ucStudent.resx">
       <DependentUpon>ucStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\ucStudentProfiling.resx">
+      <DependentUpon>ucStudentProfiling.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

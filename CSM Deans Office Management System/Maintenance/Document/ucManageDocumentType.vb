@@ -3,7 +3,7 @@
     Dim Id As String
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         If doctype = True Then
-            Dim maintenance As New ucDocumentLogs
+            Dim maintenance As New ucDocumentReceived
             frmDashboard.pnlDashboard.Controls.Clear()
             frmDashboard.pnlDashboard.Controls.Add(maintenance)
             doctype = False
@@ -161,6 +161,7 @@
         lockEditDel()
         edit = False
     End Sub
+    Dim dcreated As String = DateTime.Now.ToString("MMM dd, yyyy")
     Sub save()
         Dim id As String = txtDocTypeID.Text
         Dim name As String = Trim(txtName.Text)
@@ -191,7 +192,7 @@
             Else
                 Try
                     dbConnect()
-                    Dim query As String = "INSERT INTO documenttype SET Id  = '" & id & "', name ='" & name & "'"
+                    Dim query As String = "INSERT INTO documenttype SET Id  = '" & id & "', name ='" & name & "', Status ='ACTIVE', date_created ='" & dcreated & "'"
 
                     ExecuteQuery(query)
                     MsgBox("Document Type successfully Registered!", vbInformation, "Saved")

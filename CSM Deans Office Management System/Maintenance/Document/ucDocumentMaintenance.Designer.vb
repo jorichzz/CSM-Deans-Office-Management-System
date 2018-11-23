@@ -59,9 +59,9 @@ Partial Class ucDocumentMaintenance
         Me.btnDocType2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnDocType2.Location = New System.Drawing.Point(489, 255)
         Me.btnDocType2.Name = "btnDocType2"
-        Me.btnDocType2.Size = New System.Drawing.Size(247, 33)
+        Me.btnDocType2.Size = New System.Drawing.Size(163, 33)
         Me.btnDocType2.TabIndex = 20
-        Me.btnDocType2.Text = "Manage Document Type"
+        Me.btnDocType2.Text = "Document Type"
         Me.btnDocType2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDocType2.UseVisualStyleBackColor = False
         '

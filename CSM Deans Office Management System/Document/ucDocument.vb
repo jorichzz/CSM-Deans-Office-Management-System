@@ -1,12 +1,12 @@
 ﻿Public Class ucDocument
     Private Sub btnDocumentLogs_Click(sender As Object, e As EventArgs) Handles btnDocumentLogs.Click
-        Dim document As New ucDocumentLogs
+        Dim document As New ucDocumentReceived
         frmDashboard.pnlDashboard.Controls.Clear()
         frmDashboard.pnlDashboard.Controls.Add(document)
     End Sub
 
     Private Sub btnDocumentLogs2_Click(sender As Object, e As EventArgs) Handles btnDocumentLogs2.Click
-        Dim document As New ucDocumentLogs
+        Dim document As New ucDocumentReceived
         frmDashboard.pnlDashboard.Controls.Clear()
         frmDashboard.pnlDashboard.Controls.Add(document)
     End Sub

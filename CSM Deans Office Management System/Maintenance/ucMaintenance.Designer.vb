@@ -100,7 +100,7 @@ Partial Class ucMaintenance
         Me.btnUser2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnUser2.Location = New System.Drawing.Point(246, 153)
         Me.btnUser2.Name = "btnUser2"
-        Me.btnUser2.Size = New System.Drawing.Size(233, 33)
+        Me.btnUser2.Size = New System.Drawing.Size(194, 33)
         Me.btnUser2.TabIndex = 20
         Me.btnUser2.Text = "User Maintenance"
         Me.btnUser2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -213,9 +213,9 @@ Partial Class ucMaintenance
         Me.TextBox3.Location = New System.Drawing.Point(732, 404)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(197, 86)
+        Me.TextBox3.Size = New System.Drawing.Size(215, 86)
         Me.TextBox3.TabIndex = 21
-        Me.TextBox3.Text = "•This feature is use to track the logs of the individual user."
+        Me.TextBox3.Text = "•Manage Course" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "•Manage Scholarship Status" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "•Manage Year Level" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'btnDocument
         '

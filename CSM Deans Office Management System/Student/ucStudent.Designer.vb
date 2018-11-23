@@ -22,227 +22,59 @@ Partial Class ucStudent
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucStudent))
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtGivenName = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtPassword = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.txtUsername = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.txtUserID = New System.Windows.Forms.TextBox()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtLastName = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnAdd = New System.Windows.Forms.Button()
-        Me.btnDel = New System.Windows.Forms.Button()
-        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnStudent2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.lvUser = New System.Windows.Forms.ListView()
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.GroupBox2.SuspendLayout()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnStudent = New System.Windows.Forms.Button()
+        Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.btnSearch2 = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.BunifuElipse3 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.SuspendLayout()
         '
-        'GroupBox2
+        'TextBox1
         '
-        Me.GroupBox2.BackColor = System.Drawing.SystemColors.Control
-        Me.GroupBox2.Controls.Add(Me.txtGivenName)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.txtPassword)
-        Me.GroupBox2.Controls.Add(Me.txtUsername)
-        Me.GroupBox2.Controls.Add(Me.txtUserID)
-        Me.GroupBox2.Controls.Add(Me.btnSave)
-        Me.GroupBox2.Controls.Add(Me.btnCancel)
-        Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.txtLastName)
-        Me.GroupBox2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(210, 75)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(5)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(854, 171)
-        Me.GroupBox2.TabIndex = 61
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "User Configuration"
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(793, 291)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(197, 113)
+        Me.TextBox1.TabIndex = 32
+        Me.TextBox1.Text = "•Manage Student." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "•Add Student" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "•Delete Student" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "•Edit Student"
         '
-        'txtGivenName
+        'btnStudent2
         '
-        Me.txtGivenName.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.txtGivenName.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtGivenName.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtGivenName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtGivenName.HintForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtGivenName.HintText = "Given Name"
-        Me.txtGivenName.isPassword = False
-        Me.txtGivenName.LineFocusedColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.txtGivenName.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.txtGivenName.LineMouseHoverColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.txtGivenName.LineThickness = 4
-        Me.txtGivenName.Location = New System.Drawing.Point(146, 26)
-        Me.txtGivenName.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtGivenName.Name = "txtGivenName"
-        Me.txtGivenName.Size = New System.Drawing.Size(243, 33)
-        Me.txtGivenName.TabIndex = 4
-        Me.txtGivenName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnStudent2.BackColor = System.Drawing.SystemColors.Control
+        Me.btnStudent2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnStudent2.FlatAppearance.BorderSize = 0
+        Me.btnStudent2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnStudent2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnStudent2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnStudent2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStudent2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnStudent2.Location = New System.Drawing.Point(796, 256)
+        Me.btnStudent2.Name = "btnStudent2"
+        Me.btnStudent2.Size = New System.Drawing.Size(148, 33)
+        Me.btnStudent2.TabIndex = 30
+        Me.btnStudent2.Text = "Student Profile"
+        Me.btnStudent2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnStudent2.UseVisualStyleBackColor = False
         '
-        'Label2
+        'Panel1
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.Control
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label2.Location = New System.Drawing.Point(486, 7)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(107, 22)
-        Me.Label2.TabIndex = 49
-        Me.Label2.Text = "User ID No:"
-        '
-        'txtPassword
-        '
-        Me.txtPassword.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtPassword.HintForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtPassword.HintText = "Password"
-        Me.txtPassword.isPassword = False
-        Me.txtPassword.LineFocusedColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.txtPassword.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.txtPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.txtPassword.LineThickness = 4
-        Me.txtPassword.Location = New System.Drawing.Point(128, 108)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(244, 33)
-        Me.txtPassword.TabIndex = 7
-        Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'txtUsername
-        '
-        Me.txtUsername.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtUsername.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtUsername.HintForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtUsername.HintText = "Username"
-        Me.txtUsername.isPassword = False
-        Me.txtUsername.LineFocusedColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.txtUsername.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.txtUsername.LineMouseHoverColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.txtUsername.LineThickness = 4
-        Me.txtUsername.Location = New System.Drawing.Point(128, 67)
-        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(244, 33)
-        Me.txtUsername.TabIndex = 6
-        Me.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'txtUserID
-        '
-        Me.txtUserID.Location = New System.Drawing.Point(599, 7)
-        Me.txtUserID.Name = "txtUserID"
-        Me.txtUserID.ReadOnly = True
-        Me.txtUserID.Size = New System.Drawing.Size(227, 27)
-        Me.txtUserID.TabIndex = 8
-        '
-        'btnSave
-        '
-        Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(2, Byte), Integer))
-        Me.btnSave.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSave.FlatAppearance.BorderSize = 0
-        Me.btnSave.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSave.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(706, 53)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(120, 49)
-        Me.btnSave.TabIndex = 9
-        Me.btnSave.Text = "SAVE"
-        Me.btnSave.UseVisualStyleBackColor = False
-        '
-        'btnCancel
-        '
-        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(2, Byte), Integer))
-        Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCancel.FlatAppearance.BorderSize = 0
-        Me.btnCancel.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(706, 108)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(120, 49)
-        Me.btnCancel.TabIndex = 10
-        Me.btnCancel.Text = "CANCEL"
-        Me.btnCancel.UseVisualStyleBackColor = False
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.SystemColors.Control
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label7.Location = New System.Drawing.Point(15, 121)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(100, 22)
-        Me.Label7.TabIndex = 43
-        Me.Label7.Text = "Password:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.SystemColors.Control
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label6.Location = New System.Drawing.Point(15, 80)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(106, 22)
-        Me.Label6.TabIndex = 44
-        Me.Label6.Text = "Username:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.SystemColors.Control
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label5.Location = New System.Drawing.Point(15, 39)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(124, 22)
-        Me.Label5.TabIndex = 45
-        Me.Label5.Text = "User's Name:"
-        '
-        'txtLastName
-        '
-        Me.txtLastName.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtLastName.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLastName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtLastName.HintForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtLastName.HintText = "Last Name"
-        Me.txtLastName.isPassword = False
-        Me.txtLastName.LineFocusedColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.txtLastName.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.txtLastName.LineMouseHoverColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.txtLastName.LineThickness = 4
-        Me.txtLastName.Location = New System.Drawing.Point(401, 26)
-        Me.txtLastName.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(243, 33)
-        Me.txtLastName.TabIndex = 5
-        Me.txtLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(2, Byte), Integer))
+        Me.Panel1.Location = New System.Drawing.Point(0, 40)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1194, 12)
+        Me.Panel1.TabIndex = 26
         '
         'Label1
         '
@@ -252,159 +84,115 @@ Partial Class ucStudent
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(14, 7)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(216, 23)
-        Me.Label1.TabIndex = 58
-        Me.Label1.Text = "Manage User Account"
+        Me.Label1.Size = New System.Drawing.Size(79, 23)
+        Me.Label1.TabIndex = 25
+        Me.Label1.Text = "Student"
         '
-        'btnAdd
+        'btnStudent
         '
-        Me.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue
-        Me.btnAdd.FlatAppearance.BorderSize = 0
-        Me.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAdd.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.ForeColor = System.Drawing.Color.Black
-        Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
-        Me.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdd.Location = New System.Drawing.Point(37, 79)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(169, 95)
-        Me.btnAdd.TabIndex = 60
-        Me.btnAdd.Text = "             Add User"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnStudent.BackColor = System.Drawing.SystemColors.Control
+        Me.btnStudent.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnStudent.FlatAppearance.BorderSize = 0
+        Me.btnStudent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnStudent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnStudent.Image = CType(resources.GetObject("btnStudent.Image"), System.Drawing.Image)
+        Me.btnStudent.Location = New System.Drawing.Point(653, 256)
+        Me.btnStudent.Name = "btnStudent"
+        Me.btnStudent.Size = New System.Drawing.Size(137, 131)
+        Me.btnStudent.TabIndex = 27
+        Me.btnStudent.UseVisualStyleBackColor = False
         '
-        'btnDel
+        'BunifuElipse1
         '
-        Me.btnDel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnDel.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue
-        Me.btnDel.FlatAppearance.BorderSize = 0
-        Me.btnDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDel.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDel.ForeColor = System.Drawing.Color.Black
-        Me.btnDel.Image = CType(resources.GetObject("btnDel.Image"), System.Drawing.Image)
-        Me.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDel.Location = New System.Drawing.Point(37, 281)
-        Me.btnDel.Name = "btnDel"
-        Me.btnDel.Size = New System.Drawing.Size(169, 95)
-        Me.btnDel.TabIndex = 63
-        Me.btnDel.Text = "              Delete            User"
-        Me.btnDel.UseVisualStyleBackColor = True
+        Me.BunifuElipse1.ElipseRadius = 20
+        Me.BunifuElipse1.TargetControl = Me.btnStudent
         '
-        'btnEdit
+        'TextBox3
         '
-        Me.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue
-        Me.btnEdit.FlatAppearance.BorderSize = 0
-        Me.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEdit.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEdit.ForeColor = System.Drawing.Color.Black
-        Me.btnEdit.Image = CType(resources.GetObject("btnEdit.Image"), System.Drawing.Image)
-        Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEdit.Location = New System.Drawing.Point(37, 180)
-        Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(169, 95)
-        Me.btnEdit.TabIndex = 62
-        Me.btnEdit.Text = "              Edit User"
-        Me.btnEdit.UseVisualStyleBackColor = True
+        Me.TextBox3.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(316, 291)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(197, 86)
+        Me.TextBox3.TabIndex = 35
+        Me.TextBox3.Text = "•Search a specific Student"
         '
-        'Panel1
+        'btnSearch2
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(2, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(0, 40)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1194, 12)
-        Me.Panel1.TabIndex = 59
+        Me.btnSearch2.BackColor = System.Drawing.SystemColors.Control
+        Me.btnSearch2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSearch2.FlatAppearance.BorderSize = 0
+        Me.btnSearch2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnSearch2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnSearch2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSearch2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearch2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnSearch2.Location = New System.Drawing.Point(316, 256)
+        Me.btnSearch2.Name = "btnSearch2"
+        Me.btnSearch2.Size = New System.Drawing.Size(157, 33)
+        Me.btnSearch2.TabIndex = 34
+        Me.btnSearch2.Text = "Search Student"
+        Me.btnSearch2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSearch2.UseVisualStyleBackColor = False
         '
-        'ColumnHeader3
+        'btnSearch
         '
-        Me.ColumnHeader3.Text = "Username"
-        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader3.Width = 188
+        Me.btnSearch.BackColor = System.Drawing.SystemColors.Control
+        Me.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSearch.FlatAppearance.BorderSize = 0
+        Me.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSearch.Image = CType(resources.GetObject("btnSearch.Image"), System.Drawing.Image)
+        Me.btnSearch.Location = New System.Drawing.Point(169, 256)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(141, 131)
+        Me.btnSearch.TabIndex = 33
+        Me.btnSearch.UseVisualStyleBackColor = False
         '
-        'ColumnHeader6
+        'BunifuElipse2
         '
-        Me.ColumnHeader6.Text = "Last Name"
-        Me.ColumnHeader6.Width = 203
+        Me.BunifuElipse2.ElipseRadius = 20
+        Me.BunifuElipse2.TargetControl = Me.btnSearch
         '
-        'ColumnHeader2
+        'BunifuElipse3
         '
-        Me.ColumnHeader2.Text = "Given Name"
-        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 300
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "USER ID"
-        Me.ColumnHeader1.Width = 157
-        '
-        'lvUser
-        '
-        Me.lvUser.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader6, Me.ColumnHeader3, Me.ColumnHeader4})
-        Me.lvUser.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lvUser.FullRowSelect = True
-        Me.lvUser.GridLines = True
-        Me.lvUser.Location = New System.Drawing.Point(210, 254)
-        Me.lvUser.MultiSelect = False
-        Me.lvUser.Name = "lvUser"
-        Me.lvUser.Size = New System.Drawing.Size(854, 408)
-        Me.lvUser.TabIndex = 64
-        Me.lvUser.UseCompatibleStateImageBehavior = False
-        Me.lvUser.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "Password"
-        Me.ColumnHeader4.Width = 0
+        Me.BunifuElipse3.ElipseRadius = 20
+        Me.BunifuElipse3.TargetControl = Me.btnSearch
         '
         'ucStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.btnDel)
-        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnStudent2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.lvUser)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnStudent)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.btnSearch2)
+        Me.Controls.Add(Me.btnSearch)
         Me.Margin = New System.Windows.Forms.Padding(5)
         Me.Name = "ucStudent"
         Me.Size = New System.Drawing.Size(1139, 708)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents txtGivenName As Bunifu.Framework.UI.BunifuMaterialTextbox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtPassword As Bunifu.Framework.UI.BunifuMaterialTextbox
-    Friend WithEvents txtUsername As Bunifu.Framework.UI.BunifuMaterialTextbox
-    Friend WithEvents txtUserID As TextBox
-    Friend WithEvents btnSave As Button
-    Friend WithEvents btnCancel As Button
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents txtLastName As Bunifu.Framework.UI.BunifuMaterialTextbox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents btnAdd As Button
-    Friend WithEvents btnDel As Button
-    Friend WithEvents btnEdit As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents btnStudent2 As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents lvUser As ListView
-    Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ColumnHeader2 As ColumnHeader
-    Friend WithEvents ColumnHeader6 As ColumnHeader
-    Friend WithEvents ColumnHeader3 As ColumnHeader
-    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnStudent As Button
+    Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents btnSearch2 As Button
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
+    Friend WithEvents BunifuElipse3 As Bunifu.Framework.UI.BunifuElipse
 End Class

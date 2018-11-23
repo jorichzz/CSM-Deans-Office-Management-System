@@ -22,4 +22,16 @@
         frmDashboard.pnlDashboard.Controls.Clear()
         frmDashboard.pnlDashboard.Controls.Add(maintenance)
     End Sub
+
+    Private Sub btnStudent_Click(sender As Object, e As EventArgs) Handles btnStudent.Click
+        Dim maintenance As New ucStudentMaintenance
+        frmDashboard.pnlDashboard.Controls.Clear()
+        frmDashboard.pnlDashboard.Controls.Add(maintenance)
+    End Sub
+
+    Private Sub btnStudent2_Click(sender As Object, e As EventArgs) Handles btnStudent2.Click
+        Dim maintenance As New ucStudentMaintenance
+        frmDashboard.pnlDashboard.Controls.Clear()
+        frmDashboard.pnlDashboard.Controls.Add(maintenance)
+    End Sub
 End Class

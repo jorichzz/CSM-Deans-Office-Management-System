@@ -4,7 +4,14 @@ Module modConnection
     Public connect As New MySqlConnection
     Public reader As MySqlDataReader
     Public command As New MySqlCommand
+
+    Public StudID As String 'FOR SEARCHING STUDENT
+    Public searchStud As Boolean = False
+
     Public doctype As Boolean = False
+    Public course As Boolean = False
+    Public scholar As Boolean = False
+    Public year As Boolean = False
 
     Public Sub dbConnect()
         connect = New MySqlConnection("server=localhost;uid=root;pwd=;database=csmdb;")

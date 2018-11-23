@@ -76,7 +76,7 @@ Partial Class ucUserMaintenance
         Me.btnLogs2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnLogs2.Location = New System.Drawing.Point(732, 256)
         Me.btnLogs2.Name = "btnLogs2"
-        Me.btnLogs2.Size = New System.Drawing.Size(180, 33)
+        Me.btnLogs2.Size = New System.Drawing.Size(104, 33)
         Me.btnLogs2.TabIndex = 10
         Me.btnLogs2.Text = "User Logs"
         Me.btnLogs2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -94,9 +94,9 @@ Partial Class ucUserMaintenance
         Me.btnUser2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnUser2.Location = New System.Drawing.Point(246, 256)
         Me.btnUser2.Name = "btnUser2"
-        Me.btnUser2.Size = New System.Drawing.Size(233, 33)
+        Me.btnUser2.Size = New System.Drawing.Size(143, 33)
         Me.btnUser2.TabIndex = 11
-        Me.btnUser2.Text = "Manage User Account"
+        Me.btnUser2.Text = "User Account"
         Me.btnUser2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnUser2.UseVisualStyleBackColor = False
         '

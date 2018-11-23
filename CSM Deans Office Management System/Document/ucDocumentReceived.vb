@@ -1,4 +1,4 @@
-﻿Public Class ucDocumentLogs
+﻿Public Class ucDocumentReceived
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Dim document As New ucDocument
         frmDashboard.pnlDashboard.Controls.Clear()

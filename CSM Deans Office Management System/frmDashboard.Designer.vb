@@ -32,6 +32,7 @@ Partial Class frmDashboard
         Me.pnlDashboard = New System.Windows.Forms.Panel()
         Me.slider = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnMaintenance = New System.Windows.Forms.Button()
         Me.btnStudentProfile = New System.Windows.Forms.Button()
@@ -40,6 +41,7 @@ Partial Class frmDashboard
         Me.Panel2.SuspendLayout()
         CType(Me.slider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -112,6 +114,7 @@ Partial Class frmDashboard
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.btnMaintenance)
         Me.Panel1.Controls.Add(Me.btnStudentProfile)
@@ -122,6 +125,16 @@ Partial Class frmDashboard
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(231, 773)
         Me.Panel1.TabIndex = 0
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(31, 20)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(150, 150)
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
         '
         'btnLogout
         '
@@ -139,7 +152,7 @@ Partial Class frmDashboard
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(212, 63)
         Me.btnLogout.TabIndex = 4
-        Me.btnLogout.Text = "LOGOUT"
+        Me.btnLogout.Text = "EXIT"
         Me.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnLogout.UseVisualStyleBackColor = False
@@ -248,6 +261,7 @@ Partial Class frmDashboard
         Me.Panel2.PerformLayout()
         CType(Me.slider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -264,4 +278,5 @@ Partial Class frmDashboard
     Friend WithEvents btnLogout As Button
     Friend WithEvents btnMaintenance As Button
     Friend WithEvents btnStudentProfile As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

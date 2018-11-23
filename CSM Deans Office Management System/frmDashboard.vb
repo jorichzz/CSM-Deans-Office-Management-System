@@ -14,6 +14,10 @@
         slider.Height = btnDocument.Height()
         slider.Top = btnDocument.Top()
         doctype = False
+        course = False
+        scholar = False
+        year = False
+        searchStud = False
     End Sub
 
     Private Sub btnFacultyProfile_Click_1(sender As Object, e As EventArgs) Handles btnFacultyProfile.Click
@@ -23,6 +27,10 @@
         slider.Height = btnFacultyProfile.Height()
         slider.Top = btnFacultyProfile.Top()
         doctype = False
+        course = False
+        scholar = False
+        year = False
+        searchStud = False
     End Sub
 
     Private Sub btnStudentProfile_Click_1(sender As Object, e As EventArgs) Handles btnStudentProfile.Click
@@ -32,11 +40,16 @@
         slider.Height = btnStudentProfile.Height()
         slider.Top = btnStudentProfile.Top()
         doctype = False
+        course = False
+        scholar = False
+        year = False
+        searchStud = False
     End Sub
 
     Private Sub btnLogout_Click_1(sender As Object, e As EventArgs) Handles btnLogout.Click
         slider.Height = btnLogout.Height()
         slider.Top = btnLogout.Top()
+        Me.Hide()
         Application.Exit()
     End Sub
 
@@ -47,5 +60,9 @@
         slider.Height = btnMaintenance.Height()
         slider.Top = btnMaintenance.Top()
         doctype = False
+        course = False
+        scholar = False
+        year = False
+        searchStud = False
     End Sub
 End Class
