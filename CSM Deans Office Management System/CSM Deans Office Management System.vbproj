@@ -83,7 +83,9 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -110,6 +112,12 @@
     <Compile Include="Document\ucBorrowDocument.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Document\ucDocumenDelivered.Designer.vb">
+      <DependentUpon>ucDocumenDelivered.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Document\ucDocumenDelivered.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Document\ucDocument.Designer.vb">
       <DependentUpon>ucDocument.vb</DependentUpon>
     </Compile>
@@ -122,10 +130,46 @@
     <Compile Include="Document\ucDocumentReceived.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Document\ucDocumentsLogs.Designer.vb">
+      <DependentUpon>ucDocumentsLogs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Document\ucDocumentsLogs.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Document\ucSearchDocs.Designer.vb">
+      <DependentUpon>ucSearchDocs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Document\ucSearchDocs.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Document\ucSearchDocument.Designer.vb">
+      <DependentUpon>ucSearchDocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Document\ucSearchDocument.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Faculty\frmSearchFaculty.Designer.vb">
+      <DependentUpon>frmSearchFaculty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\frmSearchFaculty.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Faculty\ucFaculty.Designer.vb">
       <DependentUpon>ucFaculty.vb</DependentUpon>
     </Compile>
     <Compile Include="Faculty\ucFaculty.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Faculty\ucFacultyProfiling.Designer.vb">
+      <DependentUpon>ucFacultyProfiling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\ucFacultyProfiling.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Faculty\ucSearchFaculty.Designer.vb">
+      <DependentUpon>ucSearchFaculty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\ucSearchFaculty.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmDashboard.vb">
@@ -133,6 +177,12 @@
     </Compile>
     <Compile Include="frmDashboard.Designer.vb">
       <DependentUpon>frmDashboard.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgotPassword.Designer.vb">
+      <DependentUpon>frmForgotPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmForgotPassword.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.vb">
@@ -147,10 +197,52 @@
     <Compile Include="Maintenance\Document\ucDocumentMaintenance.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Maintenance\Document\ucManageDocsBorrowable.Designer.vb">
+      <DependentUpon>ucManageDocsBorrowable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Document\ucManageDocsBorrowable.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Document\ucManageDocumentCategory.Designer.vb">
+      <DependentUpon>ucManageDocumentCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Document\ucManageDocumentCategory.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Maintenance\Document\ucManageDocumentType.Designer.vb">
       <DependentUpon>ucManageDocumentType.vb</DependentUpon>
     </Compile>
     <Compile Include="Maintenance\Document\ucManageDocumentType.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Faculty\ucFacultyMaintenance.Designer.vb">
+      <DependentUpon>ucFacultyMaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Faculty\ucFacultyMaintenance.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Faculty\ucManageDepartment.Designer.vb">
+      <DependentUpon>ucManageDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Faculty\ucManageDepartment.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Faculty\ucManageDesignation.Designer.vb">
+      <DependentUpon>ucManageDesignation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Faculty\ucManageDesignation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Faculty\ucManageEligibility.Designer.vb">
+      <DependentUpon>ucManageEligibility.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Faculty\ucManageEligibility.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Faculty\ucManageSchoolGraduated.Designer.vb">
+      <DependentUpon>ucManageSchoolGraduated.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Faculty\ucManageSchoolGraduated.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Maintenance\Student\ucManageCourse.Designer.vb">
@@ -212,6 +304,56 @@
     <Compile Include="Maintenance\User\ucUserMaintenance.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Report\CrystalReportFaculty.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportFaculty.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReportImage.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportImage.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReportStudent.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportStudent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmReport.Designer.vb">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics\ucFacultyStat.Designer.vb">
+      <DependentUpon>ucFacultyStat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\ucFacultyStat.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistics\ucStatistics.Designer.vb">
+      <DependentUpon>ucStatistics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\ucStatistics.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistics\ucStudentStat.Designer.vb">
+      <DependentUpon>ucStudentStat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\ucStudentStat.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Student\ucSearchStudent.Designer.vb">
       <DependentUpon>ucSearchStudent.vb</DependentUpon>
     </Compile>
@@ -235,17 +377,41 @@
     <EmbeddedResource Include="Document\ucBorrowDocument.resx">
       <DependentUpon>ucBorrowDocument.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\ucDocumenDelivered.resx">
+      <DependentUpon>ucDocumenDelivered.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\ucDocument.resx">
       <DependentUpon>ucDocument.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\ucDocumentReceived.resx">
       <DependentUpon>ucDocumentReceived.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\ucDocumentsLogs.resx">
+      <DependentUpon>ucDocumentsLogs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\ucSearchDocs.resx">
+      <DependentUpon>ucSearchDocs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\ucSearchDocument.resx">
+      <DependentUpon>ucSearchDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Faculty\frmSearchFaculty.resx">
+      <DependentUpon>frmSearchFaculty.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Faculty\ucFaculty.resx">
       <DependentUpon>ucFaculty.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Faculty\ucFacultyProfiling.resx">
+      <DependentUpon>ucFacultyProfiling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Faculty\ucSearchFaculty.resx">
+      <DependentUpon>ucSearchFaculty.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgotPassword.resx">
+      <DependentUpon>frmForgotPassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
@@ -253,8 +419,29 @@
     <EmbeddedResource Include="Maintenance\Document\ucDocumentMaintenance.resx">
       <DependentUpon>ucDocumentMaintenance.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Document\ucManageDocsBorrowable.resx">
+      <DependentUpon>ucManageDocsBorrowable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Document\ucManageDocumentCategory.resx">
+      <DependentUpon>ucManageDocumentCategory.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Maintenance\Document\ucManageDocumentType.resx">
       <DependentUpon>ucManageDocumentType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Faculty\ucFacultyMaintenance.resx">
+      <DependentUpon>ucFacultyMaintenance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Faculty\ucManageDepartment.resx">
+      <DependentUpon>ucManageDepartment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Faculty\ucManageDesignation.resx">
+      <DependentUpon>ucManageDesignation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Faculty\ucManageEligibility.resx">
+      <DependentUpon>ucManageEligibility.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Faculty\ucManageSchoolGraduated.resx">
+      <DependentUpon>ucManageSchoolGraduated.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance\Student\ucManageCourse.resx">
       <DependentUpon>ucManageCourse.vb</DependentUpon>
@@ -283,6 +470,30 @@
     <EmbeddedResource Include="Maintenance\User\ucUserMaintenance.resx">
       <DependentUpon>ucUserMaintenance.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReportFaculty.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportFaculty.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReportImage.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportImage.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReportStudent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportStudent.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmReport.resx">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\ucFacultyStat.resx">
+      <DependentUpon>ucFacultyStat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\ucStatistics.resx">
+      <DependentUpon>ucStatistics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\ucStudentStat.resx">
+      <DependentUpon>ucStudentStat.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student\ucSearchStudent.resx">
       <DependentUpon>ucSearchStudent.vb</DependentUpon>
     </EmbeddedResource>
@@ -304,6 +515,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="Report\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Report\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -316,6 +538,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

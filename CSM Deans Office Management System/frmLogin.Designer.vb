@@ -29,8 +29,10 @@ Partial Class frmLogin
         Me.btnLogin = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.btnCancel = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.txtPassword = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.txtUsername = New Bunifu.Framework.UI.BunifuMaterialTextbox()
+        Me.txtinvi = New Bunifu.Framework.UI.BunifuMaterialTextbox()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -70,11 +72,11 @@ Partial Class frmLogin
         Me.btnLogin.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.btnLogin.IdleForecolor = System.Drawing.Color.White
         Me.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(2, Byte), Integer))
-        Me.btnLogin.Location = New System.Drawing.Point(29, 311)
+        Me.btnLogin.Location = New System.Drawing.Point(29, 322)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(201, 42)
-        Me.btnLogin.TabIndex = 2
+        Me.btnLogin.TabIndex = 4
         Me.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnCancel
@@ -95,11 +97,11 @@ Partial Class frmLogin
         Me.btnCancel.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.btnCancel.IdleForecolor = System.Drawing.Color.White
         Me.btnCancel.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(2, Byte), Integer))
-        Me.btnCancel.Location = New System.Drawing.Point(29, 350)
+        Me.btnCancel.Location = New System.Drawing.Point(29, 361)
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(201, 42)
-        Me.btnCancel.TabIndex = 3
+        Me.btnCancel.TabIndex = 5
         Me.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'PictureBox1
@@ -111,27 +113,6 @@ Partial Class frmLogin
         Me.PictureBox1.Size = New System.Drawing.Size(120, 120)
         Me.PictureBox1.TabIndex = 54
         Me.PictureBox1.TabStop = False
-        '
-        'txtPassword
-        '
-        Me.txtPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.ForeColor = System.Drawing.Color.Black
-        Me.txtPassword.HintForeColor = System.Drawing.Color.Empty
-        Me.txtPassword.HintText = "Password"
-        Me.txtPassword.isPassword = True
-        Me.txtPassword.LineFocusedColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.txtPassword.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.txtPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.txtPassword.LineThickness = 2
-        Me.txtPassword.Location = New System.Drawing.Point(22, 263)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(5)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(216, 36)
-        Me.txtPassword.TabIndex = 1
-        Me.txtPassword.Text = "password"
-        Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'txtUsername
         '
@@ -146,13 +127,57 @@ Partial Class frmLogin
         Me.txtUsername.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.txtUsername.LineMouseHoverColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.txtUsername.LineThickness = 2
-        Me.txtUsername.Location = New System.Drawing.Point(22, 222)
+        Me.txtUsername.Location = New System.Drawing.Point(22, 215)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(5)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(216, 36)
         Me.txtUsername.TabIndex = 0
         Me.txtUsername.Text = "Username"
         Me.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'txtinvi
+        '
+        Me.txtinvi.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtinvi.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtinvi.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtinvi.ForeColor = System.Drawing.Color.Black
+        Me.txtinvi.HintForeColor = System.Drawing.Color.Empty
+        Me.txtinvi.HintText = ""
+        Me.txtinvi.isPassword = True
+        Me.txtinvi.LineFocusedColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.txtinvi.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.txtinvi.LineMouseHoverColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.txtinvi.LineThickness = 2
+        Me.txtinvi.Location = New System.Drawing.Point(22, 256)
+        Me.txtinvi.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtinvi.Name = "txtinvi"
+        Me.txtinvi.Size = New System.Drawing.Size(216, 36)
+        Me.txtinvi.TabIndex = 1234
+        Me.txtinvi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LinkLabel1.Location = New System.Drawing.Point(26, 301)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(115, 16)
+        Me.LinkLabel1.TabIndex = 3
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "ForgotPassword?"
+        '
+        'txtPassword
+        '
+        Me.txtPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Location = New System.Drawing.Point(26, 265)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
+        Me.txtPassword.Size = New System.Drawing.Size(212, 20)
+        Me.txtPassword.TabIndex = 1
+        Me.txtPassword.Text = "Password"
         '
         'frmLogin
         '
@@ -162,6 +187,8 @@ Partial Class frmLogin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(280, 411)
         Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.txtinvi)
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnCancel)
@@ -186,6 +213,8 @@ Partial Class frmLogin
     Friend WithEvents btnCancel As Bunifu.Framework.UI.BunifuThinButton2
     Friend WithEvents btnLogin As Bunifu.Framework.UI.BunifuThinButton2
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents txtPassword As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents txtUsername As Bunifu.Framework.UI.BunifuMaterialTextbox
+    Friend WithEvents txtinvi As Bunifu.Framework.UI.BunifuMaterialTextbox
+    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents txtPassword As TextBox
 End Class

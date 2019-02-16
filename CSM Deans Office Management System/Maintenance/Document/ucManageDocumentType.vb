@@ -2,11 +2,16 @@
     Dim edit As Boolean = False
     Dim Id As String
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        If doctype = True Then
-            Dim maintenance As New ucDocumentReceived
+        If doctype1 = True Then
+            Dim maintenance As New ucDocumentLogs
             frmDashboard.pnlDashboard.Controls.Clear()
             frmDashboard.pnlDashboard.Controls.Add(maintenance)
-            doctype = False
+            doctype1 = False
+        ElseIf doctype2 = True Then
+            Dim maintenance As New ucDocumenDelivered
+            frmDashboard.pnlDashboard.Controls.Clear()
+            frmDashboard.pnlDashboard.Controls.Add(maintenance)
+            doctype2 = False
         Else
             Dim maintenance As New ucDocumentMaintenance
             frmDashboard.pnlDashboard.Controls.Clear()
@@ -52,6 +57,9 @@
         lockEditDel()
         gbLock()
         loadDataDisplay()
+        If admin = False Then
+            btnDel.Visible = False
+        End If
     End Sub
     Sub lockEditDel()
         btnAdd.Enabled = True
@@ -226,5 +234,15 @@
         unlockEditDel()
         btnCancel.Enabled = True
         transferName()
+    End Sub
+
+    Private Sub txtName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtName.KeyPress
+        CharOnly(e)
+    End Sub
+
+    Private Sub txtName_KeyDown(sender As Object, e As KeyEventArgs) Handles txtName.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnSave_Click(sender, e)
+        End If
     End Sub
 End Class

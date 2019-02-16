@@ -34,4 +34,16 @@
         frmDashboard.pnlDashboard.Controls.Clear()
         frmDashboard.pnlDashboard.Controls.Add(maintenance)
     End Sub
+
+    Private Sub btnLogs_Click(sender As Object, e As EventArgs) Handles btnLogs.Click
+        Dim maintenance As New ucFacultyMaintenance
+        frmDashboard.pnlDashboard.Controls.Clear()
+        frmDashboard.pnlDashboard.Controls.Add(maintenance)
+    End Sub
+
+    Private Sub btnLogs2_Click(sender As Object, e As EventArgs) Handles btnLogs2.Click
+        Dim maintenance As New ucFacultyMaintenance
+        frmDashboard.pnlDashboard.Controls.Clear()
+        frmDashboard.pnlDashboard.Controls.Add(maintenance)
+    End Sub
 End Class

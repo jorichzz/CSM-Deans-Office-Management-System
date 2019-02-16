@@ -59,9 +59,9 @@ Partial Class ucStudentProfiling
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.lvStudent = New System.Windows.Forms.ListView()
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.txtSearch = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -93,7 +93,7 @@ Partial Class ucStudentProfiling
         Me.btnAdd.Location = New System.Drawing.Point(37, 79)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(169, 95)
-        Me.btnAdd.TabIndex = 60
+        Me.btnAdd.TabIndex = 0
         Me.btnAdd.Text = "                  Add" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "            Student"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
@@ -112,7 +112,7 @@ Partial Class ucStudentProfiling
         Me.btnDel.Location = New System.Drawing.Point(37, 281)
         Me.btnDel.Name = "btnDel"
         Me.btnDel.Size = New System.Drawing.Size(169, 95)
-        Me.btnDel.TabIndex = 63
+        Me.btnDel.TabIndex = 2
         Me.btnDel.Text = "               Delete" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "            Student" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.btnDel.UseVisualStyleBackColor = True
         '
@@ -131,7 +131,7 @@ Partial Class ucStudentProfiling
         Me.btnEdit.Location = New System.Drawing.Point(37, 180)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(169, 95)
-        Me.btnEdit.TabIndex = 62
+        Me.btnEdit.TabIndex = 1
         Me.btnEdit.Text = "                  Edit" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "            Student" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.btnEdit.UseVisualStyleBackColor = True
         '
@@ -157,7 +157,7 @@ Partial Class ucStudentProfiling
         Me.btnBack.Location = New System.Drawing.Point(37, 589)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(166, 73)
-        Me.btnBack.TabIndex = 65
+        Me.btnBack.TabIndex = 3
         Me.btnBack.Text = "Back"
         Me.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnBack.UseVisualStyleBackColor = True
@@ -179,7 +179,7 @@ Partial Class ucStudentProfiling
         Me.txtLastName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(243, 33)
-        Me.txtLastName.TabIndex = 5
+        Me.txtLastName.TabIndex = 6
         Me.txtLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'Label5
@@ -232,7 +232,7 @@ Partial Class ucStudentProfiling
         Me.btnCancel.Location = New System.Drawing.Point(728, 129)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(120, 49)
-        Me.btnCancel.TabIndex = 10
+        Me.btnCancel.TabIndex = 15
         Me.btnCancel.Text = "CANCEL"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
@@ -250,7 +250,7 @@ Partial Class ucStudentProfiling
         Me.btnSave.Location = New System.Drawing.Point(728, 74)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(120, 49)
-        Me.btnSave.TabIndex = 9
+        Me.btnSave.TabIndex = 14
         Me.btnSave.Text = "SAVE"
         Me.btnSave.UseVisualStyleBackColor = False
         '
@@ -283,7 +283,7 @@ Partial Class ucStudentProfiling
         Me.txtGivenName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtGivenName.Name = "txtGivenName"
         Me.txtGivenName.Size = New System.Drawing.Size(243, 33)
-        Me.txtGivenName.TabIndex = 4
+        Me.txtGivenName.TabIndex = 7
         Me.txtGivenName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'GroupBox2
@@ -396,48 +396,53 @@ Partial Class ucStudentProfiling
         '
         'cmbStatus
         '
+        Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbStatus.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbStatus.FormattingEnabled = True
         Me.cmbStatus.Location = New System.Drawing.Point(500, 189)
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.Size = New System.Drawing.Size(222, 31)
-        Me.cmbStatus.TabIndex = 51
+        Me.cmbStatus.TabIndex = 12
         '
         'cmbYL
         '
+        Me.cmbYL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbYL.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbYL.FormattingEnabled = True
         Me.cmbYL.Location = New System.Drawing.Point(131, 186)
         Me.cmbYL.Name = "cmbYL"
         Me.cmbYL.Size = New System.Drawing.Size(139, 31)
-        Me.cmbYL.TabIndex = 51
+        Me.cmbYL.TabIndex = 11
         '
         'cmbGender
         '
+        Me.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbGender.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbGender.FormattingEnabled = True
         Me.cmbGender.Location = New System.Drawing.Point(547, 37)
         Me.cmbGender.Name = "cmbGender"
         Me.cmbGender.Size = New System.Drawing.Size(119, 31)
-        Me.cmbGender.TabIndex = 51
+        Me.cmbGender.TabIndex = 5
         '
         'cmbScho
         '
+        Me.cmbScho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbScho.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbScho.FormattingEnabled = True
         Me.cmbScho.Location = New System.Drawing.Point(457, 139)
         Me.cmbScho.Name = "cmbScho"
         Me.cmbScho.Size = New System.Drawing.Size(222, 31)
-        Me.cmbScho.TabIndex = 51
+        Me.cmbScho.TabIndex = 10
         '
         'cmbCourse
         '
+        Me.cmbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbCourse.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbCourse.FormattingEnabled = True
         Me.cmbCourse.Location = New System.Drawing.Point(99, 130)
         Me.cmbCourse.Name = "cmbCourse"
         Me.cmbCourse.Size = New System.Drawing.Size(171, 31)
-        Me.cmbCourse.TabIndex = 50
+        Me.cmbCourse.TabIndex = 9
         '
         'txtID
         '
@@ -476,7 +481,7 @@ Partial Class ucStudentProfiling
         Me.txtMI.Margin = New System.Windows.Forms.Padding(4)
         Me.txtMI.Name = "txtMI"
         Me.txtMI.Size = New System.Drawing.Size(42, 35)
-        Me.txtMI.TabIndex = 4
+        Me.txtMI.TabIndex = 8
         Me.txtMI.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'Label8
@@ -567,6 +572,11 @@ Partial Class ucStudentProfiling
         Me.lvStudent.UseCompatibleStateImageBehavior = False
         Me.lvStudent.View = System.Windows.Forms.View.Details
         '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Gender"
+        Me.ColumnHeader8.Width = 89
+        '
         'txtSearch
         '
         Me.txtSearch.BackColor = System.Drawing.SystemColors.ButtonFace
@@ -584,7 +594,7 @@ Partial Class ucStudentProfiling
         Me.txtSearch.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(295, 35)
-        Me.txtSearch.TabIndex = 4
+        Me.txtSearch.TabIndex = 13
         Me.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'PictureBox1
@@ -595,11 +605,6 @@ Partial Class ucStudentProfiling
         Me.PictureBox1.Size = New System.Drawing.Size(42, 41)
         Me.PictureBox1.TabIndex = 66
         Me.PictureBox1.TabStop = False
-        '
-        'ColumnHeader8
-        '
-        Me.ColumnHeader8.Text = "Gender"
-        Me.ColumnHeader8.Width = 89
         '
         'ucStudentProfiling
         '

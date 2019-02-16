@@ -14,6 +14,9 @@
             btnCancel.Enabled = True
             transferName()
         End If
+        If admin = False Then
+            btnDel.Visible = False
+        End If
     End Sub
     Sub lockEditDel()
         btnAdd.Enabled = True
@@ -200,7 +203,8 @@
         gbUnlockExcept()
         unlockEditDel()
         edit = True
-        txtID.Focus()
+        txtID.Enabled = False
+        txtLastName.Focus()
     End Sub
     Sub unlockEditDel()
         btnAdd.Enabled = False
@@ -349,6 +353,9 @@
         lockItems()
         gbLock()
         clear()
+        Dim student As New ucStudentProfiling
+        frmDashboard.pnlDashboard.Controls.Clear()
+        frmDashboard.pnlDashboard.Controls.Add(student)
     End Sub
     Sub lockItems()
         txtID.Enabled = False

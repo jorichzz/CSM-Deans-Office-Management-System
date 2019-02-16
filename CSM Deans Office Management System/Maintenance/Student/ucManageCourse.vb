@@ -7,7 +7,7 @@
             Dim maintenance As New ucStudentProfiling
             frmDashboard.pnlDashboard.Controls.Clear()
             frmDashboard.pnlDashboard.Controls.Add(maintenance)
-            doctype = False
+            course = False
         Else
             Dim maintenance As New ucStudentMaintenance
             frmDashboard.pnlDashboard.Controls.Clear()
@@ -18,6 +18,9 @@
         lockEditDel()
         gbLock()
         loadDataDisplay()
+        If admin = False Then
+            btnDel.Visible = False
+        End If
     End Sub
     Sub lockEditDel()
         btnAdd.Enabled = True

@@ -10,7 +10,26 @@
     Private Sub ucManageUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lockEditDel()
         gbLock()
+        loadCmbQuestion()
         loadDataDisplay()
+    End Sub
+    Sub loadCmbQuestion()
+        Try
+            dbConnect()
+            Dim query As String = " SELECT question FROM question"
+            ExecuteQuery(query)
+
+            If reader.HasRows Then
+                While reader.Read
+                    cmbQuestion.Items.Add(reader.GetString(0))
+                End While
+            End If
+            dbDisconnect()
+        Catch ex As Exception
+            MsgBox("An Error occured: ", ex.Message)
+        Finally
+            disposeConnection()
+        End Try
     End Sub
 
     Sub lockEditDel()
@@ -23,6 +42,8 @@
         txtLastName.Enabled = False
         txtUsername.Enabled = False
         txtPassword.Enabled = False
+        cmbQuestion.Enabled = False
+        txtAnswer.Enabled = False
         btnSave.Enabled = False
         btnCancel.Enabled = False
         btnAdd.Enabled = True
@@ -79,6 +100,8 @@
         txtLastName.Enabled = True
         txtUsername.Enabled = True
         txtPassword.Enabled = True
+        txtAnswer.Enabled = True
+        cmbQuestion.Enabled = True
         btnSave.Enabled = True
         btnCancel.Enabled = True
     End Sub
@@ -117,7 +140,7 @@
     Sub transferName()
         Try
             dbConnect()
-            Dim query As String = "SELECT * FROM user WHERE Id = '" & userID & "'"
+            Dim query As String = "SELECT Id, name, givenname, lastname, username, password, user_type, user_Status, (SELECT question from question where question_Id = question.Id ), user_Answer, date_created FROM user WHERE Id = '" & userID & "'"
             ExecuteQuery(query)
             If reader.HasRows Then
                 While reader.Read
@@ -125,6 +148,8 @@
                     txtLastName.Text = reader.GetString(3)
                     txtUsername.Text = reader.GetString(4)
                     txtPassword.Text = reader.GetString(5)
+                    cmbQuestion.Text = reader.GetString(8)
+                    txtAnswer.Text = reader.GetString(9)
                     txtUserID.Text = userID
                 End While
             End If
@@ -172,11 +197,9 @@
         End If
     End Sub
     Sub clear()
-        txtUsername.Text = ""
-        txtGivenName.Text = ""
-        txtLastName.Text = ""
-        txtPassword.Text = ""
-        txtUserID.Text = ""
+        Dim maintenance As New ucManageUser
+        frmDashboard.pnlDashboard.Controls.Clear()
+        frmDashboard.pnlDashboard.Controls.Add(maintenance)
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -193,8 +216,10 @@
         Dim fullname As String = gname + " " + fname
         Dim un As String = Trim(txtUsername.Text)
         Dim pwd As String = Trim(txtPassword.Text)
+        Dim question As String = Trim(cmbQuestion.Text)
+        Dim answer As String = Trim(txtAnswer.Text)
 
-        If id = "" Or gname = "" Or fname = "" Or fullname = "" Or un = "" Or pwd = "" Then
+        If id = "" Or gname = "" Or fname = "" Or fullname = "" Or un = "" Or pwd = "" Or question = "" Or answer = "" Then
             MsgBox("Please fill up all the information")
         Else
             If edit = True Then
@@ -202,7 +227,7 @@
                 Try
                     dbConnect()
                     Dim query As String = "UPDATE user SET givenname = '" & gname & "', lastname = '" & fname & "', name = '" & fullname & "', " _
-                        & "  username = '" & un & "', password = '" & pwd & "' WHERE Id = '" & userID & "' "
+                        & "  username = '" & un & "', password = '" & pwd & "', question_Id = (SELECT Id from question WHERE question = '" & question & "' ), user_Answer = '" & answer & "' WHERE Id = '" & userID & "' "
                     ExecuteQuery(query)
                     MsgBox("User successfully Updated!", vbInformation, "Updated")
                     dbDisconnect()
@@ -223,7 +248,7 @@
                     dbConnect()
                     Dim query As String = "INSERT INTO user SET Id  = '" & id & "', user_type='User', name = '" & fullname & "', " _
                             & " givenname = '" & gname & "', lastname = '" & fname & "', username = '" & un & "', " _
-                            & " password = '" & pwd & "',  date_created = '" & dcreated & "', user_Status = 'ACTIVE'"
+                            & " password = '" & pwd & "', question_Id = (SELECT Id from question WHERE question = '" & question & "' ), user_Answer = '" & answer & "' , date_created = '" & dcreated & "', user_Status = 'ACTIVE'"
 
                     ExecuteQuery(query)
                     MsgBox("User successfully Registered!", vbInformation, "Saved")
@@ -246,6 +271,7 @@
         userID = lvUser.Items(lvUser.SelectedIndices(0)).Text
         transferName()
         unlockEditDel()
+        btnCancel.Enabled = True
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -258,5 +284,7 @@
         txtLastName.Enabled = False
         txtPassword.Enabled = False
         txtUsername.Enabled = False
+        txtAnswer.Enabled = False
+        cmbQuestion.Enabled = False
     End Sub
 End Class

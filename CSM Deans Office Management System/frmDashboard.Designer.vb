@@ -32,6 +32,7 @@ Partial Class frmDashboard
         Me.pnlDashboard = New System.Windows.Forms.Panel()
         Me.slider = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnStatistics = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnMaintenance = New System.Windows.Forms.Button()
@@ -114,6 +115,7 @@ Partial Class frmDashboard
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.btnStatistics)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.btnLogout)
         Me.Panel1.Controls.Add(Me.btnMaintenance)
@@ -125,6 +127,27 @@ Partial Class frmDashboard
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(231, 773)
         Me.Panel1.TabIndex = 0
+        '
+        'btnStatistics
+        '
+        Me.btnStatistics.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnStatistics.BackgroundImage = CType(resources.GetObject("btnStatistics.BackgroundImage"), System.Drawing.Image)
+        Me.btnStatistics.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnStatistics.FlatAppearance.BorderSize = 0
+        Me.btnStatistics.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black
+        Me.btnStatistics.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.btnStatistics.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnStatistics.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStatistics.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnStatistics.Location = New System.Drawing.Point(16, 441)
+        Me.btnStatistics.Name = "btnStatistics"
+        Me.btnStatistics.Size = New System.Drawing.Size(212, 63)
+        Me.btnStatistics.TabIndex = 7
+        Me.btnStatistics.Text = "STATISTICS"
+        Me.btnStatistics.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnStatistics.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnStatistics.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -148,7 +171,7 @@ Partial Class frmDashboard
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogout.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnLogout.Location = New System.Drawing.Point(16, 530)
+        Me.btnLogout.Location = New System.Drawing.Point(16, 612)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(212, 63)
         Me.btnLogout.TabIndex = 4
@@ -169,7 +192,7 @@ Partial Class frmDashboard
         Me.btnMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMaintenance.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMaintenance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnMaintenance.Location = New System.Drawing.Point(16, 442)
+        Me.btnMaintenance.Location = New System.Drawing.Point(16, 524)
         Me.btnMaintenance.Name = "btnMaintenance"
         Me.btnMaintenance.Size = New System.Drawing.Size(212, 63)
         Me.btnMaintenance.TabIndex = 4
@@ -279,4 +302,5 @@ Partial Class frmDashboard
     Friend WithEvents btnMaintenance As Button
     Friend WithEvents btnStudentProfile As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnStatistics As Button
 End Class

@@ -38,9 +38,16 @@ Partial Class ucManageUser
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtAnswer = New System.Windows.Forms.TextBox()
+        Me.txtpassword = New System.Windows.Forms.TextBox()
+        Me.cmbQuestion = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.BunifuMaterialTextbox2 = New Bunifu.Framework.UI.BunifuMaterialTextbox()
+        Me.BunifuMaterialTextbox1 = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.txtGivenName = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtPassword = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.txtUsername = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.txtUserID = New System.Windows.Forms.TextBox()
         Me.btnSave = New System.Windows.Forms.Button()
@@ -86,7 +93,7 @@ Partial Class ucManageUser
         Me.btnBack.Location = New System.Drawing.Point(37, 589)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(166, 73)
-        Me.btnBack.TabIndex = 50
+        Me.btnBack.TabIndex = 3
         Me.btnBack.Text = "Back"
         Me.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnBack.UseVisualStyleBackColor = True
@@ -97,10 +104,10 @@ Partial Class ucManageUser
         Me.lvUser.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvUser.FullRowSelect = True
         Me.lvUser.GridLines = True
-        Me.lvUser.Location = New System.Drawing.Point(210, 254)
+        Me.lvUser.Location = New System.Drawing.Point(210, 343)
         Me.lvUser.MultiSelect = False
         Me.lvUser.Name = "lvUser"
-        Me.lvUser.Size = New System.Drawing.Size(854, 408)
+        Me.lvUser.Size = New System.Drawing.Size(854, 319)
         Me.lvUser.TabIndex = 49
         Me.lvUser.UseCompatibleStateImageBehavior = False
         Me.lvUser.View = System.Windows.Forms.View.Details
@@ -159,7 +166,7 @@ Partial Class ucManageUser
         Me.btnDel.Location = New System.Drawing.Point(37, 281)
         Me.btnDel.Name = "btnDel"
         Me.btnDel.Size = New System.Drawing.Size(169, 95)
-        Me.btnDel.TabIndex = 47
+        Me.btnDel.TabIndex = 2
         Me.btnDel.Text = "              Delete            User"
         Me.btnDel.UseVisualStyleBackColor = True
         '
@@ -178,7 +185,7 @@ Partial Class ucManageUser
         Me.btnEdit.Location = New System.Drawing.Point(37, 180)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(169, 95)
-        Me.btnEdit.TabIndex = 46
+        Me.btnEdit.TabIndex = 1
         Me.btnEdit.Text = "              Edit User"
         Me.btnEdit.UseVisualStyleBackColor = True
         '
@@ -197,16 +204,23 @@ Partial Class ucManageUser
         Me.btnAdd.Location = New System.Drawing.Point(37, 79)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(169, 95)
-        Me.btnAdd.TabIndex = 44
+        Me.btnAdd.TabIndex = 0
         Me.btnAdd.Text = "             Add User"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox2.Controls.Add(Me.txtAnswer)
+        Me.GroupBox2.Controls.Add(Me.txtpassword)
+        Me.GroupBox2.Controls.Add(Me.cmbQuestion)
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.BunifuMaterialTextbox2)
+        Me.GroupBox2.Controls.Add(Me.BunifuMaterialTextbox1)
         Me.GroupBox2.Controls.Add(Me.txtGivenName)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.txtPassword)
         Me.GroupBox2.Controls.Add(Me.txtUsername)
         Me.GroupBox2.Controls.Add(Me.txtUserID)
         Me.GroupBox2.Controls.Add(Me.btnSave)
@@ -219,10 +233,120 @@ Partial Class ucManageUser
         Me.GroupBox2.Location = New System.Drawing.Point(210, 75)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(5)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(854, 171)
+        Me.GroupBox2.Size = New System.Drawing.Size(854, 260)
         Me.GroupBox2.TabIndex = 45
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "User Configuration"
+        '
+        'txtAnswer
+        '
+        Me.txtAnswer.AllowDrop = True
+        Me.txtAnswer.BackColor = System.Drawing.SystemColors.Control
+        Me.txtAnswer.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAnswer.Location = New System.Drawing.Point(116, 210)
+        Me.txtAnswer.Name = "txtAnswer"
+        Me.txtAnswer.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
+        Me.txtAnswer.Size = New System.Drawing.Size(244, 20)
+        Me.txtAnswer.TabIndex = 9
+        Me.txtAnswer.Text = "Password"
+        '
+        'txtpassword
+        '
+        Me.txtpassword.BackColor = System.Drawing.SystemColors.Control
+        Me.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtpassword.Location = New System.Drawing.Point(134, 116)
+        Me.txtpassword.Name = "txtpassword"
+        Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
+        Me.txtpassword.Size = New System.Drawing.Size(244, 20)
+        Me.txtpassword.TabIndex = 7
+        Me.txtpassword.Text = "Password"
+        '
+        'cmbQuestion
+        '
+        Me.cmbQuestion.BackColor = System.Drawing.SystemColors.Control
+        Me.cmbQuestion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbQuestion.Enabled = False
+        Me.cmbQuestion.FormattingEnabled = True
+        Me.cmbQuestion.Location = New System.Drawing.Point(181, 177)
+        Me.cmbQuestion.Name = "cmbQuestion"
+        Me.cmbQuestion.Size = New System.Drawing.Size(412, 27)
+        Me.cmbQuestion.TabIndex = 8
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.SystemColors.Control
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label8.Location = New System.Drawing.Point(16, 150)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(150, 18)
+        Me.Label8.TabIndex = 54
+        Me.Label8.Text = "Account Recovery:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.SystemColors.Control
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label4.Location = New System.Drawing.Point(15, 219)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(83, 22)
+        Me.Label4.TabIndex = 53
+        Me.Label4.Text = "Answer:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.SystemColors.Control
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Location = New System.Drawing.Point(15, 178)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(160, 22)
+        Me.Label3.TabIndex = 52
+        Me.Label3.Text = "Secret Question:"
+        '
+        'BunifuMaterialTextbox2
+        '
+        Me.BunifuMaterialTextbox2.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.BunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.BunifuMaterialTextbox2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuMaterialTextbox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BunifuMaterialTextbox2.HintForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BunifuMaterialTextbox2.HintText = ""
+        Me.BunifuMaterialTextbox2.isPassword = False
+        Me.BunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.BunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.BunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.BunifuMaterialTextbox2.LineThickness = 4
+        Me.BunifuMaterialTextbox2.Location = New System.Drawing.Point(105, 206)
+        Me.BunifuMaterialTextbox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.BunifuMaterialTextbox2.Name = "BunifuMaterialTextbox2"
+        Me.BunifuMaterialTextbox2.Size = New System.Drawing.Size(243, 33)
+        Me.BunifuMaterialTextbox2.TabIndex = 4
+        Me.BunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'BunifuMaterialTextbox1
+        '
+        Me.BunifuMaterialTextbox1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.BunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.BunifuMaterialTextbox1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuMaterialTextbox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BunifuMaterialTextbox1.HintForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BunifuMaterialTextbox1.HintText = ""
+        Me.BunifuMaterialTextbox1.isPassword = False
+        Me.BunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.BunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.BunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
+        Me.BunifuMaterialTextbox1.LineThickness = 4
+        Me.BunifuMaterialTextbox1.Location = New System.Drawing.Point(122, 113)
+        Me.BunifuMaterialTextbox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.BunifuMaterialTextbox1.Name = "BunifuMaterialTextbox1"
+        Me.BunifuMaterialTextbox1.Size = New System.Drawing.Size(243, 33)
+        Me.BunifuMaterialTextbox1.TabIndex = 4
+        Me.BunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'txtGivenName
         '
@@ -256,26 +380,6 @@ Partial Class ucManageUser
         Me.Label2.TabIndex = 49
         Me.Label2.Text = "User ID No:"
         '
-        'txtPassword
-        '
-        Me.txtPassword.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtPassword.HintForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtPassword.HintText = "Password"
-        Me.txtPassword.isPassword = False
-        Me.txtPassword.LineFocusedColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.txtPassword.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.txtPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
-        Me.txtPassword.LineThickness = 4
-        Me.txtPassword.Location = New System.Drawing.Point(128, 105)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(244, 33)
-        Me.txtPassword.TabIndex = 7
-        Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
         'txtUsername
         '
         Me.txtUsername.BackColor = System.Drawing.SystemColors.ButtonFace
@@ -298,6 +402,7 @@ Partial Class ucManageUser
         '
         'txtUserID
         '
+        Me.txtUserID.Enabled = False
         Me.txtUserID.Location = New System.Drawing.Point(599, 4)
         Me.txtUserID.Name = "txtUserID"
         Me.txtUserID.ReadOnly = True
@@ -318,7 +423,7 @@ Partial Class ucManageUser
         Me.btnSave.Location = New System.Drawing.Point(706, 50)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(120, 49)
-        Me.btnSave.TabIndex = 9
+        Me.btnSave.TabIndex = 10
         Me.btnSave.Text = "SAVE"
         Me.btnSave.UseVisualStyleBackColor = False
         '
@@ -336,7 +441,7 @@ Partial Class ucManageUser
         Me.btnCancel.Location = New System.Drawing.Point(706, 105)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(120, 49)
-        Me.btnCancel.TabIndex = 10
+        Me.btnCancel.TabIndex = 11
         Me.btnCancel.Text = "CANCEL"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
@@ -434,7 +539,6 @@ Partial Class ucManageUser
     Friend WithEvents txtGivenName As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents txtLastName As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtPassword As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents txtUsername As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents txtUserID As TextBox
     Friend WithEvents btnSave As Button
@@ -444,4 +548,12 @@ Partial Class ucManageUser
     Friend WithEvents Label5 As Label
     Friend WithEvents ColumnHeader5 As ColumnHeader
     Friend WithEvents ColumnHeader7 As ColumnHeader
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents cmbQuestion As ComboBox
+    Friend WithEvents txtpassword As TextBox
+    Friend WithEvents txtAnswer As TextBox
+    Friend WithEvents BunifuMaterialTextbox2 As Bunifu.Framework.UI.BunifuMaterialTextbox
+    Friend WithEvents BunifuMaterialTextbox1 As Bunifu.Framework.UI.BunifuMaterialTextbox
 End Class

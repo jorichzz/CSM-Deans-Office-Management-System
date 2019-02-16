@@ -50,6 +50,7 @@ Partial Class ucSearchStudent
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.btnPrint = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -59,7 +60,7 @@ Partial Class ucSearchStudent
         Me.Label1.BackColor = System.Drawing.SystemColors.Control
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(14, 7)
+        Me.Label1.Location = New System.Drawing.Point(14, 5)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(148, 23)
         Me.Label1.TabIndex = 36
@@ -78,7 +79,7 @@ Partial Class ucSearchStudent
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(2, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(0, 40)
+        Me.Panel1.Location = New System.Drawing.Point(0, 38)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1194, 12)
         Me.Panel1.TabIndex = 37
@@ -89,7 +90,7 @@ Partial Class ucSearchStudent
         Me.lvStudent.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvStudent.FullRowSelect = True
         Me.lvStudent.GridLines = True
-        Me.lvStudent.Location = New System.Drawing.Point(18, 187)
+        Me.lvStudent.Location = New System.Drawing.Point(18, 185)
         Me.lvStudent.MultiSelect = False
         Me.lvStudent.Name = "lvStudent"
         Me.lvStudent.Size = New System.Drawing.Size(1106, 419)
@@ -143,7 +144,7 @@ Partial Class ucSearchStudent
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(22, 70)
+        Me.PictureBox1.Location = New System.Drawing.Point(22, 68)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(42, 40)
         Me.PictureBox1.TabIndex = 68
@@ -162,7 +163,7 @@ Partial Class ucSearchStudent
         Me.txtSearch.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.txtSearch.LineMouseHoverColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.txtSearch.LineThickness = 5
-        Me.txtSearch.Location = New System.Drawing.Point(72, 63)
+        Me.txtSearch.Location = New System.Drawing.Point(72, 61)
         Me.txtSearch.Margin = New System.Windows.Forms.Padding(5)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(335, 53)
@@ -171,13 +172,13 @@ Partial Class ucSearchStudent
         '
         'cmbGender
         '
+        Me.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbGender.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbGender.FormattingEnabled = True
-        Me.cmbGender.Location = New System.Drawing.Point(200, 141)
+        Me.cmbGender.Location = New System.Drawing.Point(200, 139)
         Me.cmbGender.Name = "cmbGender"
         Me.cmbGender.Size = New System.Drawing.Size(119, 31)
         Me.cmbGender.TabIndex = 70
-        Me.cmbGender.Text = "All"
         '
         'Label8
         '
@@ -185,7 +186,7 @@ Partial Class ucSearchStudent
         Me.Label8.BackColor = System.Drawing.SystemColors.Control
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label8.Location = New System.Drawing.Point(107, 145)
+        Me.Label8.Location = New System.Drawing.Point(107, 143)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(87, 22)
         Me.Label8.TabIndex = 69
@@ -193,23 +194,23 @@ Partial Class ucSearchStudent
         '
         'cmbScho
         '
+        Me.cmbScho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbScho.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbScho.FormattingEnabled = True
-        Me.cmbScho.Location = New System.Drawing.Point(881, 145)
+        Me.cmbScho.Location = New System.Drawing.Point(881, 143)
         Me.cmbScho.Name = "cmbScho"
         Me.cmbScho.Size = New System.Drawing.Size(222, 31)
         Me.cmbScho.TabIndex = 74
-        Me.cmbScho.Text = "All"
         '
         'cmbCourse
         '
+        Me.cmbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbCourse.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbCourse.FormattingEnabled = True
-        Me.cmbCourse.Location = New System.Drawing.Point(519, 83)
+        Me.cmbCourse.Location = New System.Drawing.Point(519, 81)
         Me.cmbCourse.Name = "cmbCourse"
         Me.cmbCourse.Size = New System.Drawing.Size(171, 31)
         Me.cmbCourse.TabIndex = 73
-        Me.cmbCourse.Text = "All"
         '
         'Label7
         '
@@ -217,7 +218,7 @@ Partial Class ucSearchStudent
         Me.Label7.BackColor = System.Drawing.SystemColors.Control
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label7.Location = New System.Drawing.Point(758, 147)
+        Me.Label7.Location = New System.Drawing.Point(758, 145)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(117, 22)
         Me.Label7.TabIndex = 71
@@ -229,7 +230,7 @@ Partial Class ucSearchStudent
         Me.Label6.BackColor = System.Drawing.SystemColors.Control
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label6.Location = New System.Drawing.Point(434, 88)
+        Me.Label6.Location = New System.Drawing.Point(434, 86)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(79, 22)
         Me.Label6.TabIndex = 72
@@ -237,23 +238,23 @@ Partial Class ucSearchStudent
         '
         'cmbStatus
         '
+        Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbStatus.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbStatus.FormattingEnabled = True
-        Me.cmbStatus.Location = New System.Drawing.Point(881, 78)
+        Me.cmbStatus.Location = New System.Drawing.Point(881, 76)
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.Size = New System.Drawing.Size(222, 31)
         Me.cmbStatus.TabIndex = 77
-        Me.cmbStatus.Text = "All"
         '
         'cmbYL
         '
+        Me.cmbYL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbYL.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbYL.FormattingEnabled = True
-        Me.cmbYL.Location = New System.Drawing.Point(519, 143)
+        Me.cmbYL.Location = New System.Drawing.Point(519, 141)
         Me.cmbYL.Name = "cmbYL"
         Me.cmbYL.Size = New System.Drawing.Size(171, 31)
         Me.cmbYL.TabIndex = 78
-        Me.cmbYL.Text = "All"
         '
         'Label4
         '
@@ -261,7 +262,7 @@ Partial Class ucSearchStudent
         Me.Label4.BackColor = System.Drawing.SystemColors.Control
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label4.Location = New System.Drawing.Point(805, 83)
+        Me.Label4.Location = New System.Drawing.Point(805, 81)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 22)
         Me.Label4.TabIndex = 75
@@ -273,7 +274,7 @@ Partial Class ucSearchStudent
         Me.Label3.BackColor = System.Drawing.SystemColors.Control
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label3.Location = New System.Drawing.Point(456, 145)
+        Me.Label3.Location = New System.Drawing.Point(456, 143)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(57, 22)
         Me.Label3.TabIndex = 76
@@ -290,7 +291,7 @@ Partial Class ucSearchStudent
         Me.btnBack.ForeColor = System.Drawing.Color.Black
         Me.btnBack.Image = CType(resources.GetObject("btnBack.Image"), System.Drawing.Image)
         Me.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBack.Location = New System.Drawing.Point(18, 612)
+        Me.btnBack.Location = New System.Drawing.Point(18, 610)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(166, 73)
         Me.btnBack.TabIndex = 79
@@ -298,11 +299,30 @@ Partial Class ucSearchStudent
         Me.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnBack.UseVisualStyleBackColor = True
         '
+        'btnPrint
+        '
+        Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(106, Byte), Integer), CType(CType(2, Byte), Integer))
+        Me.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnPrint.FlatAppearance.BorderSize = 0
+        Me.btnPrint.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrint.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.Color.White
+        Me.btnPrint.Location = New System.Drawing.Point(943, 613)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(181, 62)
+        Me.btnPrint.TabIndex = 122
+        Me.btnPrint.Text = "PRINT"
+        Me.btnPrint.UseVisualStyleBackColor = False
+        '
         'ucSearchStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.cmbStatus)
         Me.Controls.Add(Me.cmbYL)
@@ -353,4 +373,5 @@ Partial Class ucSearchStudent
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnBack As Button
+    Friend WithEvents btnPrint As Button
 End Class

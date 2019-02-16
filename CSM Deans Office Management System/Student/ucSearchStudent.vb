@@ -1,4 +1,7 @@
-﻿Public Class ucSearchStudent
+﻿Imports MySql.Data.MySqlClient
+Public Class ucSearchStudent
+    Dim query As String
+    Private conn As New MySqlConnection("server='localhost'; username='root'; password=''; database='csmdb'")
 
     Private Sub ucSearchStudent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadCmbCourse()
@@ -6,17 +9,139 @@
         loadCmbScho()
         loadCmbStatus()
         loadCmbYear()
+        cmbCourse.SelectedIndex = 0
+        cmbGender.SelectedIndex = 0
+        cmbScho.SelectedIndex = 0
+        cmbStatus.SelectedIndex = 0
+        cmbYL.SelectedIndex = 0
         loadDataDisplay()
+        txtSearch.Focus()
     End Sub
     Sub loadDataDisplay()
+        Dim course, gender, scho, academicstat, yl As String
+        course = cmbCourse.Text
+        gender = cmbGender.Text
+        scho = cmbScho.Text
+        academicstat = cmbStatus.Text
+        yl = cmbYL.Text
         lvStudent.Items.Clear()
-        Dim status = "ACTIVE"
+        If cmbCourse.Text = "All" Then
+            course = ""
+        Else
+            course = cmbCourse.Text
+        End If
+        If cmbGender.Text = "All" Then
+            gender = ""
+        Else
+            gender = cmbGender.Text
+        End If
+        If cmbScho.Text = "All" Then
+            scho = ""
+        Else
+            scho = cmbScho.Text
+        End If
+        If cmbStatus.Text = "All" Then
+            academicstat = ""
+        Else
+            academicstat = cmbStatus.Text
+        End If
+        If cmbYL.Text = "All" Then
+            yl = ""
+        Else
+            yl = cmbYL.Text
+        End If
         Try
             Dim i As Integer = 0
             dbConnect()
-            Dim query As String = "SELECT Id, name, (SELECT code from course where course.Id = course_Id), gender, (SELECT name from scholarship where scholarship.Id = scholarship_Id)," _
-                                  & " (SELECT yearlevel from year where year.Id = year_Id), scholastic_Status FROM student " _
-                                  & " WHERE (Status = '" & status & "') AND (Id LIKE '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')"
+
+            query = "SELECT * FROM search_student WHERE Id LIKE '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%'"
+
+            If cmbGender.Text = "All" And cmbStatus.Text = "All" And cmbScho.Text = "All" Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%'" _
+                      & " AND year_level LIKE '%" & yl & "%'"
+                'Combo box for gender = all and status = all
+            ElseIf cmbGender.Text = "All" And cmbStatus.Text = "All" And cmbScho.Text = "With" Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%' AND scholarship != 'None'" _
+                      & " AND year_level LIKE '%" & yl & "%'"
+            ElseIf cmbGender.Text = "All" And cmbStatus.Text = "All" And cmbScho.Text = "None" Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%' AND scholarship = 'None'" _
+                      & " AND year_level LIKE '%" & yl & "%'"
+            ElseIf cmbGender.Text = "All" And cmbStatus.Text = "All" And (cmbScho.Text <> "None" And cmbScho.Text <> "With") Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%' AND scholarship = '" & scho & "'" _
+                      & " AND year_level LIKE '%" & yl & "%'"
+                'Combo box for gender = all and status = regular/irregular
+            ElseIf cmbGender.Text = "All" And cmbStatus.Text <> "All" And cmbScho.Text = "All" Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%'" _
+                      & " AND year_level LIKE '%" & yl & "%' AND scholastic_Status = '" & academicstat & "'"
+            ElseIf cmbGender.Text = "All" And cmbStatus.Text <> "All" And cmbScho.Text = "With" Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%' AND scholarship != 'None'" _
+                      & " AND year_level LIKE '%" & yl & "%' AND scholastic_Status = '" & academicstat & "'"
+            ElseIf cmbGender.Text = "All" And cmbStatus.Text <> "All" And cmbScho.Text = "None" Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%' AND scholarship = 'None'" _
+                      & " AND year_level LIKE '%" & yl & "%' AND scholastic_Status = '" & academicstat & "'"
+            ElseIf cmbGender.Text = "All" And cmbStatus.Text <> "All" And (cmbScho.Text <> "None" And cmbScho.Text <> "With") Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%' AND scholarship = '" & scho & "'" _
+                      & " AND year_level LIKE '%" & yl & "%' AND scholastic_Status = '" & academicstat & "'"
+                'Combo box for gender = male/femal status = all
+            ElseIf cmbGender.Text <> "All" And cmbStatus.Text = "All" And cmbScho.Text = "All" Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%'" _
+                      & " AND year_level LIKE '%" & yl & "%' AND gender = '" & gender & "'"
+            ElseIf cmbGender.Text <> "All" And cmbStatus.Text = "All" And cmbScho.Text = "With" Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%' AND scholarship != 'None'" _
+                      & " AND year_level LIKE '%" & yl & "%' AND gender = '" & gender & "'"
+            ElseIf cmbGender.Text <> "All" And cmbStatus.Text = "All" And cmbScho.Text = "None" Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%' AND scholarship = 'None'" _
+                      & " AND year_level LIKE '%" & yl & "%' AND gender = '" & gender & "'"
+            ElseIf cmbGender.Text <> "All" And cmbStatus.Text = "All" And (cmbScho.Text <> "None" And cmbScho.Text <> "With") Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%' AND scholarship = '" & scho & "'" _
+                      & " AND year_level LIKE '%" & yl & "%' AND gender = '" & gender & "'"
+                'Combo box for gender = male/female and status = regular/irregular
+            ElseIf cmbGender.Text <> "All" And cmbStatus.Text <> "All" And cmbScho.Text = "All" Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%'" _
+                      & " AND year_level LIKE '%" & yl & "%' AND gender = '" & gender & "' AND scholastic_Status = '" & academicstat & "'"
+            ElseIf cmbGender.Text <> "All" And cmbStatus.Text <> "All" And cmbScho.Text = "With" Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%' AND scholarship != 'None'" _
+                      & " AND year_level LIKE '%" & yl & "%' AND gender = '" & gender & "' AND scholastic_Status = '" & academicstat & "'"
+            ElseIf cmbGender.Text <> "All" And cmbStatus.Text <> "All" And cmbScho.Text = "None" Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%' AND scholarship = 'None'" _
+                      & " AND year_level LIKE '%" & yl & "%' AND gender = '" & gender & "' AND scholastic_Status = '" & academicstat & "'"
+            ElseIf cmbGender.Text <> "All" And cmbStatus.Text <> "All" And (cmbScho.Text <> "None" And cmbScho.Text <> "With") Then
+                query = "SELECT * FROM search_student " _
+                      & " WHERE (Id Like '%" & txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%')" _
+                      & " AND course LIKE '%" & course & "%' AND scholarship = '" & scho & "'" _
+                      & " AND year_level LIKE '%" & yl & "%' AND gender = '" & gender & "' AND scholastic_Status = '" & academicstat & "'"
+            End If
+
             ExecuteQuery(query)
 
             If reader.HasRows Then
@@ -61,6 +186,7 @@
     Sub loadCmbScho()
         Try
             cmbScho.Items.Add("All")
+            cmbScho.Items.Add("With")
             dbConnect()
             Dim query As String = " SELECT name FROM scholarship WHERE Status = 'ACTIVE'"
             ExecuteQuery(query)
@@ -121,7 +247,67 @@
         frmDashboard.pnlDashboard.Controls.Add(student)
     End Sub
 
-    Private Sub lvStudent_ColumnClick(sender As Object, e As ColumnClickEventArgs) Handles lvStudent.ColumnClick
+    Private Sub txtSearch_OnValueChanged(sender As Object, e As EventArgs) Handles txtSearch.OnValueChanged
+        loadDataDisplay()
+    End Sub
 
+    Private Sub cmbGender_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbGender.SelectedIndexChanged
+        loadDataDisplay()
+    End Sub
+
+    Private Sub cmbCourse_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCourse.SelectedIndexChanged
+        loadDataDisplay()
+    End Sub
+
+    Private Sub cmbYL_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbYL.SelectedIndexChanged
+        loadDataDisplay()
+    End Sub
+
+    Private Sub cmbStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbStatus.SelectedIndexChanged
+        loadDataDisplay()
+    End Sub
+
+    Private Sub cmbScho_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbScho.SelectedIndexChanged
+        loadDataDisplay()
+    End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        Try
+            Dim cmd As MySqlCommand
+            Dim adp As New MySqlDataAdapter
+            Dim dt As New DataSet
+            conn.Open()
+
+            cmd = New MySqlCommand(query, conn)
+            adp.SelectCommand = cmd
+            adp.Fill(dt, "Student")
+
+            Dim report As New CrystalReportStudent
+            Dim myTextObject As CrystalDecisions.CrystalReports.Engine.TextObject
+            myTextObject = report.Section1.ReportObjects.Item("Text26")
+            myTextObject.Text = cmbGender.Text
+            myTextObject = report.Section1.ReportObjects.Item("Text25")
+            myTextObject.Text = cmbCourse.Text
+            myTextObject = report.Section1.ReportObjects.Item("Text24")
+            myTextObject.Text = cmbScho.Text
+            myTextObject = report.Section1.ReportObjects.Item("Text28")
+            myTextObject.Text = cmbStatus.Text
+            myTextObject = report.Section1.ReportObjects.Item("Text29")
+            myTextObject.Text = cmbYL.Text
+
+
+            report.SetDataSource(dt)
+            frmReport.CrystalReportViewer1.ReportSource = report
+            frmReport.CrystalReportViewer1.Refresh()
+            cmd.Dispose()
+            adp.Dispose()
+            dt.Dispose()
+            conn.Close()
+            frmReport.Show()
+        Catch ex As Exception
+            MsgBox("An Error occured: ", ex.Message)
+        Finally
+            disposeConnection()
+        End Try
     End Sub
 End Class
