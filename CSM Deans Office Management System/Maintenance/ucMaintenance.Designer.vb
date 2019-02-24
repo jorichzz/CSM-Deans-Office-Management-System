@@ -42,6 +42,9 @@ Partial Class ucMaintenance
         Me.btnDocument2 = New System.Windows.Forms.Button()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.BunifuElipse4 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.btnSystemConfig = New System.Windows.Forms.Button()
+        Me.btnSystemConfig2 = New System.Windows.Forms.Button()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'TextBox2
@@ -50,7 +53,7 @@ Partial Class ucMaintenance
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox2.Enabled = False
         Me.TextBox2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(732, 188)
+        Me.TextBox2.Location = New System.Drawing.Point(732, 152)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(197, 86)
@@ -63,7 +66,7 @@ Partial Class ucMaintenance
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Enabled = False
         Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(243, 188)
+        Me.TextBox1.Location = New System.Drawing.Point(243, 152)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(197, 86)
@@ -80,7 +83,7 @@ Partial Class ucMaintenance
         Me.btnLogs2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogs2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogs2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnLogs2.Location = New System.Drawing.Point(732, 153)
+        Me.btnLogs2.Location = New System.Drawing.Point(732, 117)
         Me.btnLogs2.Name = "btnLogs2"
         Me.btnLogs2.Size = New System.Drawing.Size(215, 33)
         Me.btnLogs2.TabIndex = 19
@@ -98,7 +101,7 @@ Partial Class ucMaintenance
         Me.btnUser2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUser2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUser2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnUser2.Location = New System.Drawing.Point(246, 153)
+        Me.btnUser2.Location = New System.Drawing.Point(246, 117)
         Me.btnUser2.Name = "btnUser2"
         Me.btnUser2.Size = New System.Drawing.Size(194, 33)
         Me.btnUser2.TabIndex = 20
@@ -135,7 +138,7 @@ Partial Class ucMaintenance
         Me.btnLogs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogs.Image = CType(resources.GetObject("btnLogs.Image"), System.Drawing.Image)
-        Me.btnLogs.Location = New System.Drawing.Point(596, 153)
+        Me.btnLogs.Location = New System.Drawing.Point(596, 117)
         Me.btnLogs.Name = "btnLogs"
         Me.btnLogs.Size = New System.Drawing.Size(138, 131)
         Me.btnLogs.TabIndex = 1
@@ -150,7 +153,7 @@ Partial Class ucMaintenance
         Me.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUser.Image = CType(resources.GetObject("btnUser.Image"), System.Drawing.Image)
-        Me.btnUser.Location = New System.Drawing.Point(106, 153)
+        Me.btnUser.Location = New System.Drawing.Point(106, 117)
         Me.btnUser.Name = "btnUser"
         Me.btnUser.Size = New System.Drawing.Size(138, 131)
         Me.btnUser.TabIndex = 0
@@ -180,7 +183,7 @@ Partial Class ucMaintenance
         Me.btnStudent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnStudent.Image = CType(resources.GetObject("btnStudent.Image"), System.Drawing.Image)
-        Me.btnStudent.Location = New System.Drawing.Point(596, 369)
+        Me.btnStudent.Location = New System.Drawing.Point(596, 449)
         Me.btnStudent.Name = "btnStudent"
         Me.btnStudent.Size = New System.Drawing.Size(138, 131)
         Me.btnStudent.TabIndex = 2
@@ -196,7 +199,7 @@ Partial Class ucMaintenance
         Me.btnStudent2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnStudent2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnStudent2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnStudent2.Location = New System.Drawing.Point(732, 369)
+        Me.btnStudent2.Location = New System.Drawing.Point(732, 449)
         Me.btnStudent2.Name = "btnStudent2"
         Me.btnStudent2.Size = New System.Drawing.Size(215, 33)
         Me.btnStudent2.TabIndex = 19
@@ -210,7 +213,7 @@ Partial Class ucMaintenance
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox3.Enabled = False
         Me.TextBox3.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(732, 404)
+        Me.TextBox3.Location = New System.Drawing.Point(732, 484)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(215, 86)
@@ -226,7 +229,7 @@ Partial Class ucMaintenance
         Me.btnDocument.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDocument.Image = CType(resources.GetObject("btnDocument.Image"), System.Drawing.Image)
-        Me.btnDocument.Location = New System.Drawing.Point(109, 369)
+        Me.btnDocument.Location = New System.Drawing.Point(109, 449)
         Me.btnDocument.Name = "btnDocument"
         Me.btnDocument.Size = New System.Drawing.Size(138, 131)
         Me.btnDocument.TabIndex = 3
@@ -242,7 +245,7 @@ Partial Class ucMaintenance
         Me.btnDocument2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDocument2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDocument2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnDocument2.Location = New System.Drawing.Point(246, 369)
+        Me.btnDocument2.Location = New System.Drawing.Point(246, 449)
         Me.btnDocument2.Name = "btnDocument2"
         Me.btnDocument2.Size = New System.Drawing.Size(249, 33)
         Me.btnDocument2.TabIndex = 19
@@ -256,17 +259,64 @@ Partial Class ucMaintenance
         Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox4.Enabled = False
         Me.TextBox4.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(246, 404)
+        Me.TextBox4.Location = New System.Drawing.Point(246, 484)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(197, 86)
+        Me.TextBox4.Size = New System.Drawing.Size(293, 86)
         Me.TextBox4.TabIndex = 21
-        Me.TextBox4.Text = "•Manage Document Type"
+        Me.TextBox4.Text = "•Manage Document Type" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "•Manage Document Category" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "•Manage Borrow Document Categor" &
+    "y"
         '
         'BunifuElipse4
         '
         Me.BunifuElipse4.ElipseRadius = 20
         Me.BunifuElipse4.TargetControl = Me.btnDocument
+        '
+        'btnSystemConfig
+        '
+        Me.btnSystemConfig.BackColor = System.Drawing.SystemColors.Control
+        Me.btnSystemConfig.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSystemConfig.FlatAppearance.BorderSize = 0
+        Me.btnSystemConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnSystemConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnSystemConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSystemConfig.Image = CType(resources.GetObject("btnSystemConfig.Image"), System.Drawing.Image)
+        Me.btnSystemConfig.Location = New System.Drawing.Point(343, 268)
+        Me.btnSystemConfig.Name = "btnSystemConfig"
+        Me.btnSystemConfig.Size = New System.Drawing.Size(138, 131)
+        Me.btnSystemConfig.TabIndex = 2
+        Me.btnSystemConfig.UseVisualStyleBackColor = False
+        '
+        'btnSystemConfig2
+        '
+        Me.btnSystemConfig2.BackColor = System.Drawing.SystemColors.Control
+        Me.btnSystemConfig2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSystemConfig2.FlatAppearance.BorderSize = 0
+        Me.btnSystemConfig2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnSystemConfig2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnSystemConfig2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSystemConfig2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSystemConfig2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnSystemConfig2.Location = New System.Drawing.Point(479, 268)
+        Me.btnSystemConfig2.Name = "btnSystemConfig2"
+        Me.btnSystemConfig2.Size = New System.Drawing.Size(215, 33)
+        Me.btnSystemConfig2.TabIndex = 19
+        Me.btnSystemConfig2.Text = "System Configuration"
+        Me.btnSystemConfig2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSystemConfig2.UseVisualStyleBackColor = False
+        '
+        'TextBox5
+        '
+        Me.TextBox5.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox5.Enabled = False
+        Me.TextBox5.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(479, 303)
+        Me.TextBox5.Multiline = True
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(215, 86)
+        Me.TextBox5.TabIndex = 21
+        Me.TextBox5.Text = "•Manage Course" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "•Manage Scholarship Status" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "•Manage Year Level" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'ucMaintenance
         '
@@ -274,16 +324,19 @@ Partial Class ucMaintenance
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btnDocument2)
+        Me.Controls.Add(Me.btnSystemConfig2)
         Me.Controls.Add(Me.btnStudent2)
         Me.Controls.Add(Me.btnLogs2)
         Me.Controls.Add(Me.btnUser2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnDocument)
+        Me.Controls.Add(Me.btnSystemConfig)
         Me.Controls.Add(Me.btnStudent)
         Me.Controls.Add(Me.btnLogs)
         Me.Controls.Add(Me.btnUser)
@@ -313,4 +366,7 @@ Partial Class ucMaintenance
     Friend WithEvents btnDocument2 As Button
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents BunifuElipse4 As Bunifu.Framework.UI.BunifuElipse
+    Friend WithEvents btnSystemConfig As Button
+    Friend WithEvents btnSystemConfig2 As Button
+    Friend WithEvents TextBox5 As TextBox
 End Class

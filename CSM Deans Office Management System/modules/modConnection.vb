@@ -1,6 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Module modConnection
+    Public schoolyear As String
+    Public pres As String
+    Public vpaa As String
+
     Public connect As New MySqlConnection
     Public reader As MySqlDataReader
     Public command As New MySqlCommand

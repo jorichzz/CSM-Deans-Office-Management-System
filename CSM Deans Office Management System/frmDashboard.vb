@@ -8,6 +8,7 @@
         If admin = False Then
             btnMaintenance.Visible = False
         End If
+        'Panel2.BackColor = Color.FromArgb(255, 224, 192)
     End Sub
 
     Private Sub btnDocument_Click_2(sender As Object, e As EventArgs) Handles btnDocument.Click

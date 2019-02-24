@@ -46,4 +46,16 @@
         frmDashboard.pnlDashboard.Controls.Clear()
         frmDashboard.pnlDashboard.Controls.Add(maintenance)
     End Sub
+
+    Private Sub btnSystemConfig_Click(sender As Object, e As EventArgs) Handles btnSystemConfig.Click
+        Dim maintenance As New ucSystemConfig
+        frmDashboard.pnlDashboard.Controls.Clear()
+        frmDashboard.pnlDashboard.Controls.Add(maintenance)
+    End Sub
+
+    Private Sub btnSystemConfig2_Click(sender As Object, e As EventArgs) Handles btnSystemConfig2.Click
+        Dim maintenance As New ucSystemConfig
+        frmDashboard.pnlDashboard.Controls.Clear()
+        frmDashboard.pnlDashboard.Controls.Add(maintenance)
+    End Sub
 End Class

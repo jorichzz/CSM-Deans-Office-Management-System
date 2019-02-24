@@ -119,7 +119,7 @@ Public Class ucDocumentLogs
     Sub loadCmbCat()
         Try
             dbConnect()
-            Dim query As String = " SELECT name FROM documentcategory WHERE Status = 'ACTIVE'"
+            Dim query As String = " SELECT name FROM documentcategory WHERE name NOT LIKE '%Dean%' AND Status = 'ACTIVE'"
             ExecuteQuery(query)
 
             If reader.HasRows Then

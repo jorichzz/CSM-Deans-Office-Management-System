@@ -55,14 +55,13 @@
         Try
             lbluser.Text = ""
             dbConnect()
-            Dim query As String = "SELECT Id, name, (SELECT question FROM question WHERE question_Id = Id) AS question FROM user WHERE username = '" & txtUsername.Text & "'"
+            Dim query As String = "SELECT Id, name, schoolyear_Id,(SELECT question FROM question WHERE question_Id = Id) AS question FROM user WHERE schoolyear_Id = '" & schoolyear & "' AND username = '" & txtUsername.Text & "'"
             ExecuteQuery(query)
             reader.Read()
 
             If reader.HasRows Then
                 lbluser.Text = "Username Confirmed!"
                 lbluser.ForeColor = Color.Green
-                txtQuestion.Text = reader.GetString(2)
                 showmid()
                 txtAnswer.Focus()
 
@@ -84,7 +83,7 @@
         Try
             lblcorrect.Text = ""
             dbConnect()
-            Dim query As String = "SELECT Id, name, (SELECT question FROM question WHERE question_Id = Id) AS question, user_Answer FROM user WHERE username = '" & txtUsername.Text & "'"
+            Dim query As String = "SELECT Id, name, (SELECT question FROM question WHERE question_Id = Id) AS question, user_Answer, schoolyear_Id FROM user WHERE schoolyear_Id = '" & schoolyear & "' AND username = '" & txtUsername.Text & "'"
             ExecuteQuery(query)
             reader.Read()
 
@@ -119,7 +118,7 @@
             Else
                 If txtNew.Text = txtConfirm.Text Then
                     dbConnect()
-                    Dim query As String = "UPDATE user SET password = '" & txtConfirm.Text & "' WHERE username = '" & txtUsername.Text & "'"
+                    Dim query As String = "UPDATE user SET password = '" & txtConfirm.Text & "' WHERE schoolyear_Id = '" & schoolyear & "'AND username = '" & txtUsername.Text & "'"
                     ExecuteQuery(query)
 
                     lblsuccess.Text = "Password successfully Updated!"
@@ -141,15 +140,34 @@
 
     Private Sub frmForgotPassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtUsername.Focus()
+        loadCmb()
+    End Sub
+    Sub loadCmb()
+        Try
+            dbConnect()
+            Dim query As String = " SELECT question FROM question "
+            ExecuteQuery(query)
+
+            If reader.HasRows Then
+                While reader.Read
+                    txtQuestion.Items.Add(reader.GetString(0))
+                End While
+            End If
+            dbDisconnect()
+        Catch ex As Exception
+            MsgBox("An Error occured: ", ex.Message)
+        Finally
+            disposeConnection()
+        End Try
     End Sub
 
-    Private Sub txtUsername_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUsername.KeyDown, txtNew.KeyDown
+    Private Sub txtUsername_KeyDown(sender As Object, e As KeyEventArgs) Handles txtNew.KeyDown, txtUsername.KeyDown
         If e.KeyCode = Keys.Enter Then
             btnCheck_Click(sender, e)
         End If
     End Sub
 
-    Private Sub txtUsername_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUsername.KeyPress, txtNew.KeyPress
+    Private Sub txtUsername_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNew.KeyPress, txtUsername.KeyPress
         CharOnly(e)
     End Sub
 
@@ -163,17 +181,17 @@
         CharOnly(e)
     End Sub
 
-    Private Sub txtNewPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNewPassword.KeyPress
+    Private Sub txtNewPassword_KeyPress(sender As Object, e As KeyPressEventArgs) 
         CharOnly(e)
     End Sub
 
-    Private Sub txtConfirmPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtConfirmPassword.KeyDown, txtConfirm.KeyDown
+    Private Sub txtConfirmPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles  txtConfirm.KeyDown
         If e.KeyCode = Keys.Enter Then
             btnSubmit_Click(sender, e)
         End If
     End Sub
 
-    Private Sub txtConfirmPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtConfirmPassword.KeyPress, txtConfirm.KeyPress
+    Private Sub txtConfirmPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtConfirm.KeyPress
         CharOnly(e)
     End Sub
 End Class

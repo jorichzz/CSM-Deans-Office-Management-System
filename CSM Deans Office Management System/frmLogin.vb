@@ -15,7 +15,7 @@
         End If
     End Sub
 
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()
     End Sub
 
@@ -37,7 +37,7 @@
         End If
     End Sub
 
-    Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtinvi.KeyDown, txtPassword.KeyDown
+    Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
         If e.KeyCode = Keys.Enter Then
             If txtPassword.Text = "Username" And txtUsername.Text = "password" Then
                 MsgBox("Please Enter Username/Password")
@@ -51,12 +51,8 @@
         End If
     End Sub
 
-    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtinvi.KeyPress, txtinvi.KeyPress, txtPassword.KeyPress
+    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
         CharOnly(e)
-    End Sub
-
-    Private Sub txtUsername_OnValueChanged(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
@@ -65,12 +61,35 @@
     End Sub
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        loadDataDisplay()
         txtUsername.Focus()
+    End Sub
+
+    Sub loadDataDisplay()
+        Dim status = "ACTIVE"
+        Try
+            dbConnect()
+            Dim query As String = "SELECT * FROM schoolyear WHERE Status = '" & status & "'"
+            ExecuteQuery(query)
+
+            If reader.HasRows Then
+                While reader.Read
+                    schoolyear = reader.GetString("Id")
+                    pres = reader.GetString("President")
+                    vpaa = reader.GetString("VPAA")
+                End While
+            End If
+            dbDisconnect()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            disposeConnection()
+        End Try
     End Sub
     Sub login()
         Try
             dbConnect()
-            Dim query As String = "SELECT * FROM user WHERE username = @username AND password = @password"
+            Dim query As String = "SELECT * FROM user WHERE username = @username AND password = @password AND schoolyear_Id = '" & schoolyear & "'"
             ExecuteQueryParameter(query)
             command.Parameters.AddWithValue("@username", txtUsername.Text)
             command.Parameters.AddWithValue("@password", txtPassword.Text)

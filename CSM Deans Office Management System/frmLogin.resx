@@ -3159,34 +3159,13 @@
         AgXnE0S9/wfyX3jjZ2dOMgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnCancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMkAAAAqCAYAAAAZFn8pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIjSURBVHhe7d0xaxRBFMBxERKMxnhaBMRSsLGRNGIjfgdB
-        LAUrw+Xi3cVgqkNQDKhgGitRCChWQiAQiIUBIWUghYWQIh8k857zdtaY497d1Ln5F79q5zbN/pmdhZmc
-        0cMdBTAckQAZRAJkEAmQQSRABpEAGaMjOdhW2eqpvLuj8uKGhqXLGubPAqdffJbtmZbVOZXNFdU/m34D
-        0dBI5OcbDd2Ghva0hifOHwHGxdMLGjozKhvP3BYGI4lFyfu7Ku2L/g2BcRWfeXl5U/X3974m+iOxQJ5f
-        1bAw6d8EKIA1oPvf/EhsBiEQIIYS1ysDkdgahFcsoLZ4XuXLoxORHGynRbo3GCiUdBqqe+spEvsEVq3w
-        nYFAsZoTKp8e1JGszvmDgIIdRbJyLUUSlmfdQUDx4mySImlN+QMA1JE4FwAkRAJkEAmQQSRABpEAGUQC
-        ZBAJkEEkQAaRABkpkuaEexHAv0g44AEYqorE9vV6F4HiLc/WkXx9rGHhnD8IKJis3UuR2Kb30J5xBwGl
-        su3s8uNVHYnNJp8falhkdyJQaU6qvL3dfxBEdVpj73q1G8v9EVCSpSvHpzr+j8Tsrat0+dKFskm3ofJr
-        7biL/kgi2f2QDqhrsZBHYeIrls0gJwMxA5FU7NXr432VziX/ZsA4sbOu29Mqr2+5B2f7kdSsKPsEZmek
-        ujcHTrvWVPqvCVs9twEzMhIARAJkEQmQQSRABpEAI+3oX8tBdYr8VUYrAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnLogin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMkAAAAqCAYAAAAZFn8pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIjSURBVHhe7d0xaxRBFMBxERKMxnhaBMRSsLGRNGIjfgdB
-        LAUrw+Xi3cVgqkNQDKhgGitRCChWQiAQiIUBIWUghYWQIh8k857zdtaY497d1Ln5F79q5zbN/pmdhZmc
-        0cMdBTAckQAZRAJkEAmQQSRABpEAGaMjOdhW2eqpvLuj8uKGhqXLGubPAqdffJbtmZbVOZXNFdU/m34D
-        0dBI5OcbDd2Ghva0hifOHwHGxdMLGjozKhvP3BYGI4lFyfu7Ku2L/g2BcRWfeXl5U/X3974m+iOxQJ5f
-        1bAw6d8EKIA1oPvf/EhsBiEQIIYS1ysDkdgahFcsoLZ4XuXLoxORHGynRbo3GCiUdBqqe+spEvsEVq3w
-        nYFAsZoTKp8e1JGszvmDgIIdRbJyLUUSlmfdQUDx4mySImlN+QMA1JE4FwAkRAJkEAmQQSRABpEAGUQC
-        ZBAJkEEkQAaRABkpkuaEexHAv0g44AEYqorE9vV6F4HiLc/WkXx9rGHhnD8IKJis3UuR2Kb30J5xBwGl
-        su3s8uNVHYnNJp8falhkdyJQaU6qvL3dfxBEdVpj73q1G8v9EVCSpSvHpzr+j8Tsrat0+dKFskm3ofJr
-        7biL/kgi2f2QDqhrsZBHYeIrls0gJwMxA5FU7NXr432VziX/ZsA4sbOu29Mqr2+5B2f7kdSsKPsEZmek
-        ujcHTrvWVPqvCVs9twEzMhIARAJkEQmQQSRABpEAI+3oX8tBdYr8VUYrAAAAAElFTkSuQmCC
-</value>
-  </data>
+  <metadata name="BunifuMaterialTextbox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="BunifuElipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>141, 17</value>
+  </metadata>
+  <metadata name="BunifuElipse3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>265, 17</value>
+  </metadata>
 </root>

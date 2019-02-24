@@ -82,7 +82,7 @@ Partial Class ucDocumentLogs
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(244, 23)
         Me.Label1.TabIndex = 51
-        Me.Label1.Text = "Document Recieved Logs"
+        Me.Label1.Text = "Document Received Logs"
         '
         'btnBack
         '
